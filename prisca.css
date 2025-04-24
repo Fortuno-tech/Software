@@ -1,0 +1,23 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0feea4; /* Fond de la page en vert clair */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% de la hauteur de l'écran */
+}
+h1 {
+    color: red; /* Assure-toi que tout est bien écrit */
+}
+
+.container {
+    background-color: white; /* Fond blanc pour le contenu */
+    padding: 40px;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    text-align: center; 
+    color: red; /* Texte en rouge */
+}
