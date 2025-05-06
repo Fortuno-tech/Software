@@ -1,0 +1,68 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    width: 300%; /* 3 slides */
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #slide1 {
+    background-image: url('images/maison.jpg');
+  }
+  
+  #slide2 {
+    
+    background: linear-gradient(135deg,#bcc2bd,#bfcec2, #BED3C3, #8FBFA8 ,#81bda0 );
+  }
+  #slide3 {
+    background: linear-gradient(135deg,#bcc2bd,#bfcec2, #BED3C3, #8FBFA8 ,#81bda0 );
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #ffffffaa;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #00000055;
+  }
+  
+  
+  
