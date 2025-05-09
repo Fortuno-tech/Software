@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./block.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div>
+                <div style="display: flex;justify-content: space-between;">
+                    <div>
+                    <input type="checkbox" id="check" onclick="toggleMenu()">
+                    <span>Fortico Smart Home</span>
+                </div>
+                <div>
+                    <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
+                        <i class="fas fa-bars">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </i>
+                    </label>
+                </div>
+                </div>
+            </div>
+        </header>
+        <!-- GAUCHE 
+        le navigation  
+        -->
+        <div class="container">
+            <section class="section_Gauche">
+                <div>
+                    <div class="myHome"></div>
+                    <div>
+                        <nav>
+                            <ul>
+                            <li><a href="">HOME</a></li>
+                            <li><a href="">Devices</a></li>
+                            <li><a href="">Room</a></li>
+                            <li><a href="">add devices</a></li>
+                            <li><a href="">Scene</a></li>
+                            <li><a href="">Acces</a></li>
+                            <li><a href="">Setting</a></li>
+                           </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <!-- 
+        le stricture eo ampoviny rehetra manomnoka eto
+        -->
+            <section class="section_Container">
+
+                <div class="img_fonctionalite">
+                    <div class="Big_image_Home">
+                        <img src=".." alt="txt" width="" height="">
+                    </div>
+                    <div class="fonctionalite">
+                        <div class="F1"></div>
+                        <div class="F2"></div>
+                        <div class="F3"></div>
+                        <div class="F4"></div>
+                    </div>
+                </div>
+                <!-- 
+            le Meteo sy le sary am sisiny reo bedroom
+             -->
+                <div class="section_droite">
+                    <div class="Meteo"></div>
+                    <div class="flex_bedroom">
+                        <div class="bedroom"></div>
+                        <div class="bedroom"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="./block.js"></script>
+</body>
+
+</html>
