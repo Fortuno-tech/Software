@@ -19,7 +19,10 @@ header {
     background-color: yellow;
     height: 150px;
 }
-
+.block_Entier{
+  background-color: red;
+    padding: 6px 4px;
+}
 @media (max-width: 1265px) {
     .fonctionalite {
         display: flex;
@@ -45,6 +48,9 @@ header {
 nav ul{
   float: right;
   margin-right: 20px;
+     background-color: blueviolet;
+    margin: 0px;
+    height: 76.6vh;
 }
 nav ul li{
   display: block;
