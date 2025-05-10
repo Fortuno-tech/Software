@@ -56,24 +56,24 @@ header {
 }
 
 nav ul{
-  float: right;
-  margin-right: 20px;
-     /* background-color: blueviolet; */
-    margin: 0px;
-    height: 76.6vh;
+margin: 11px;
+    padding: 0;
+    list-style: none;
 }
 nav ul li{
   display: block;
-  margin: 50px 0;
+  /* margin: 50px 0; */
   line-height: 20px;
+  margin: 15px 0;
 }
 nav ul li a{
   color: black;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    text-decoration: none;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
 }
 
 ul{
@@ -220,7 +220,7 @@ footer {
   }
 
 @media (max-width: 970px) {
-    .checkbtn {
+   /* .checkbtn {
       display: block;
     }
   
@@ -229,20 +229,45 @@ footer {
     }
   .section_Gauche{
     float: right;
-    /* margin-right: 20px; */
+    
   }
-    .section_Gauche {
+     .section_Gauche {
       position: fixed;
       width: 100%;
       height: 100vh;
       background: #2c3e50;
-      /* top: 80px; */
       left: -100%;
       text-align: center;
       transition: all .5s;
       
-    }
+    } */
+    .checkbtn {
+      display: block;
+  }
 
+  .section_Gauche {
+      position: fixed;
+      width: 250px;
+      height: 100vh;
+      background: #2c3e50;
+      left: -250px;
+      top: 0;
+      z-index: 100;
+      padding-top: 80px;
+  }
+
+  .section_Gauche.active {
+      left: 0;
+      transition: all 0.4s;
+  }
+
+  nav ul li a {
+      color: white;
+  }
+
+  .container {
+      position: relative;
+  }
   
     .line {
       /* width: 20px; */
@@ -256,10 +281,14 @@ footer {
   
     nav ul li {
       display: block;
-      margin: 50px 0;
+      /* margin: 50px 0; */
       line-height: 30px;
     }
-  
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
     nav ul li a {
       font-size: 20px;
     }
@@ -273,9 +302,9 @@ footer {
     
     }
     .section_Gauche{
-    background: #0082e6;
+    background: #470088;
     /* height: 80px; */
-    width: 100%;
+    /* width: 50%; */
     }
    
   
