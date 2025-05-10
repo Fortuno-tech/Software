@@ -253,6 +253,7 @@ footer {
       left: -250px;
       top: 0;
       z-index: 100;
+      transition: all 0.4s
       padding-top: 80px;
   }
 
