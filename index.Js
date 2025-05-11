@@ -1,50 +1,55 @@
-let currentSlide = 0;
+// var body = document.getElementById("body");
 
-function goToSlide(index) {
-    const container = document.getElementById("container");
-    container.style.transform = `translateX(-${index * 100}vw)`;
-    currentSlide = index;
-  
-    // 🔄 Mise à jour des points actifs
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach(dot => dot.classList.remove("active"));
-    if (dots[index]) dots[index].classList.add("active");
-  }
-  
+// const navLinks = document.getElementById("check");
+// function toggleMenu() {
+//   navLinks.classList.toggle("check");
+//   const SG = document.getElementsByClassName("section_Gauche")[0];
+//   if (body.offsetWidth <= 970) {
+//     if (navLinks.className == "check") {
+//       SG.style.left = "0%";
+//       SG.style.position = "";
+//     } else {
+//       SG.style.left = "-100%";
+//       //   SG.style.position = "fixed";
+//     }
+//   } else if (body.offsetWidth > 970) {
+//     navLinks.className = "";
+//     alert("ok");
+//   }
+// }
+// document.getElementById("menu").addEventListener("click", () => {});
 
-// 🔹 GESTURE POUR MOBILE
-let startX = 0;
-document.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-document.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  handleSwipe(endX - startX);
-});
-
-// 🔹 GESTURE POUR SOURIS
-let isDragging = false;
-let startMouseX = 0;
-
-document.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  startMouseX = e.clientX;
-});
-
-document.addEventListener("mouseup", (e) => {
-  if (isDragging) {
-    const endMouseX = e.clientX;
-    handleSwipe(endMouseX - startMouseX);
-    isDragging = false;
-  }
-});
-
-function handleSwipe(deltaX) {
-    if (deltaX < -50 && currentSlide < 2) {
-        goToSlide(currentSlide + 1);
-      } else if (deltaX > 50 && currentSlide > 0) {
-        goToSlide(currentSlide - 1);
-      }
-      
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const check = document.getElementById("check");
+    const sectionGauche = document.getElementById("sectionGauche");
+    const body = document.getElementById("body");
+    
+    // Toggle menu on checkbox change
+    check.addEventListener('change', function() {
+        if (this.checked) {
+            sectionGauche.classList.add('active');
+        } else {
+            sectionGauche.classList.remove('active');
+        }
+    });
+    
+    // Close menu when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 970 && 
+            !e.target.closest('.section_Gauche') && 
+            !e.target.closest('.checkbtn') &&
+            !e.target.closest('#check')) {
+            check.checked = false;
+            sectionGauche.classList.remove('active');
+        }
+    });
+    
+    // Adjust menu on resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 970) {
+            check.checked = false;
+            sectionGauche.classList.remove('active');
+            sectionGauche.style.left = '';
+        }
+    });
+  });
