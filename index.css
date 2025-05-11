@@ -11,10 +11,16 @@ header {
   padding: 20px 2px;
   margin: auto;
 }
-
+.rondImage{
+background-color:  #4A4A58;
+ width: 220px;
+  height: 100vh;
+ padding: 20px 0;
+  text-align: center;
+}
 .myHome {
-  background-color: rgb(55, 55, 66);
-  height: 150px;
+  background-color: rgb(48, 48, 224);
+  height: 200px;
 }
 .block_Entier{
 background-color: rgb(55, 55, 66);
@@ -265,7 +271,7 @@ footer {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(180, 35, 35);
 }
 
 .container {
