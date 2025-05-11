@@ -314,3 +314,89 @@ list-style: none;
 #menu{
   z-index: 999;
 }
+/*Style Section Weather*/
+.Meteo {
+  max-width: 900px;
+  margin: 0px auto;
+  padding: 5px 5px;
+  background-color: #373742;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Bloc gauche */
+.left-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 28%;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  color: #E6EAEE;
+}
+
+.location img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.time-date {
+  font-size: 1em;
+  color: #ccc;
+}
+
+/* Bloc droit */
+.right-block {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  width: 55%;
+  padding: 40px 10px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-block img {
+  width: 78px;
+  height: 78px;
+  margin-bottom: 10px;
+}
+
+.info-block div {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #E6EAEE;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .Meteo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-block,
+  .right-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right-block {
+    gap: 25px;
+    margin-top: 20px;
+  }
+}
