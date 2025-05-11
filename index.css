@@ -301,9 +301,7 @@ list-style: none;
     background: none;
     color: #474a4d;
   }
-  #check:checked~.section_droite {
-  
-  }
+
   .section_Gauche{
   background: #151416;
   /* height: 80px; */
