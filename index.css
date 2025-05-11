@@ -2,21 +2,22 @@
 body {
   width: 100%;
   margin: auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
-  background-color: rgb(50, 190, 50);
+  background-color: rgb(55, 55, 66);
   max-width: 100%;
   padding: 20px 2px;
   margin: auto;
 }
 
 .myHome {
-  background-color: yellow;
+  background-color: rgb(55, 55, 66);
   height: 150px;
 }
 .block_Entier{
-background-color: red;
+background-color: rgb(55, 55, 66);
   padding: 6px 4px;
 }
 @media (max-width: 1265px) {
@@ -67,7 +68,7 @@ line-height: 20px;
 margin: 15px 0;
 }
 nav ul li a{
-color: black;
+color: rgb(230, 234, 238);
 font-size: 17px;
 padding: 7px 13px;
 border-radius: 3px;
@@ -91,7 +92,7 @@ margin: 0;
 }
 .section_Gauche {
   width: 200px;
-  background-color: blueviolet;
+  background-color: rgb(55, 55, 66);
 }
 
 
@@ -101,7 +102,7 @@ ul {
 }
 
 .section_Container {
-  background-color: #470088;
+  background-color: rgb(55, 55, 66);
 
 }
 
@@ -139,7 +140,7 @@ ul {
 .F3,
 .F4 {
   height: 150px;
-  background-color: white;
+  background-color: rgb(74, 74, 88);
   /* border: 2px solid white; */
   border: 2px solid #000000;
   ;
@@ -158,7 +159,7 @@ ul {
 
 .Meteo {
   height: 216px;
-  background-color: green;
+  background-color: rgb(74, 74, 88);
 }
 
 .section_droite {
@@ -191,6 +192,7 @@ ul {
   /* height: 90vh; */
   /* overflow: auto; */
   width: 100%;
+  background-color: rgb();
   /* flex-wrap: wrap; */
   justify-content: space-between;
 }
@@ -202,7 +204,7 @@ ul {
 }
 
 footer {
-  background-color: yellow;
+  background-color: rgb(55, 55, 66);
   height: 100px;
   width: 100%;
 }
@@ -297,19 +299,22 @@ list-style: none;
   ul a:hover,
   a.active {
     background: none;
-    color: #0082e6;
+    color: #474a4d;
   }
   #check:checked~.section_droite {
   
   }
   .section_Gauche{
-  background: #470088;
+  background: #151416;
   /* height: 80px; */
   /* width: 50%; */
   transition: all 0.4s;
   }
  
 
+}
+.grand_titre{
+  color:rgb(230, 234, 238)
 }
 #menu{
   z-index: 999;
