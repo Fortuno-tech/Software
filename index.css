@@ -1,5 +1,6 @@
 html,
 body {
+<<<<<<< HEAD
   font-family: 'Calibri', sans-serif;
   height: 100%;
   margin: 0;
@@ -17,12 +18,22 @@ header {
   background-color: #373742;
   border-style: solid;
   border-color: #2A2A32 ;
+=======
+  width: 100%;
+  margin: auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  background-color: rgb(55, 55, 66);
+>>>>>>> 78ac7f6 (changement des fons en css)
   max-width: 100%;
   padding: 20px 2px;
   margin: auto;
 }
 
 .myHome {
+<<<<<<< HEAD
   background-color: transparent;
   height: 170px;
   background-color: #373742;
@@ -34,6 +45,13 @@ header {
   height: 100%;
   min-height: 100vh;
   background-color: #373742;
+=======
+  background-color: rgb(55, 55, 66);
+  height: 150px;
+}
+.block_Entier{
+background-color: rgb(55, 55, 66);
+>>>>>>> 78ac7f6 (changement des fons en css)
   padding: 6px 4px;
   box-sizing: border-box;
 }
@@ -81,12 +99,29 @@ nav ul {
   padding: 0;
   list-style: none;
 }
+<<<<<<< HEAD
 
 nav ul li {
   display: block;
   /* margin: 50px 0; */
   line-height: 20px;
   margin: 15px 0;
+=======
+nav ul li{
+display: block;
+/* margin: 50px 0; */
+line-height: 20px;
+margin: 15px 0;
+}
+nav ul li a{
+color: rgb(230, 234, 238);
+font-size: 17px;
+padding: 7px 13px;
+border-radius: 3px;
+text-transform: uppercase;
+text-decoration: none;
+display: block;
+>>>>>>> 78ac7f6 (changement des fons en css)
 }
 
 nav ul li a {
@@ -114,9 +149,14 @@ ul {
 }
 
 .section_Gauche {
+<<<<<<< HEAD
   align-items: center;
   width: 310px;
   background-color: #373742;
+=======
+  width: 200px;
+  background-color: rgb(55, 55, 66);
+>>>>>>> 78ac7f6 (changement des fons en css)
 }
 
 
@@ -125,8 +165,13 @@ ul {
   margin: 0px;
 }
 
+<<<<<<< HEAD
 .content-section {
   background-color: #373742;
+=======
+.section_Container {
+  background-color: rgb(55, 55, 66);
+>>>>>>> 78ac7f6 (changement des fons en css)
 
 }
 
@@ -166,7 +211,14 @@ ul {
 .F3,
 .F4 {
   height: 150px;
+<<<<<<< HEAD
   background-color: #4A4A58;
+=======
+  background-color: rgb(74, 74, 88);
+  /* border: 2px solid white; */
+  border: 2px solid #000000;
+  ;
+>>>>>>> 78ac7f6 (changement des fons en css)
   width: 150px;
   border-radius: 20px;
   margin-left: 7px;
@@ -182,6 +234,7 @@ ul {
 
  /* .Meteo {
   height: 216px;
+<<<<<<< HEAD
   background-color: #4A4A58;
   border-style: solid;
   border-color: green;
@@ -195,6 +248,9 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+=======
+  background-color: rgb(74, 74, 88);
+>>>>>>> 78ac7f6 (changement des fons en css)
 }
 
 
@@ -279,6 +335,7 @@ ul {
   /* height: 90vh; */
   /* overflow: auto; */
   width: 100%;
+  background-color: rgb();
   /* flex-wrap: wrap; */
   justify-content: space-between;
 }
@@ -289,9 +346,13 @@ ul {
 }
 
 footer {
+<<<<<<< HEAD
   background-color: #373742;
   border-style: solid;
   border-color: #2A2A32 ;
+=======
+  background-color: rgb(55, 55, 66);
+>>>>>>> 78ac7f6 (changement des fons en css)
   height: 100px;
   width: 100%;
 }
@@ -392,7 +453,7 @@ footer {
   ul a:hover,
   a.active {
     background: none;
-    color: #0082e6;
+    color: #474a4d;
   }
 
   #check:checked~.section_droite {}
@@ -403,11 +464,27 @@ footer {
     /* width: 50%; */
     transition: all 0.4s;
   }
+<<<<<<< HEAD
 
 
 }
 
 #menu {
+=======
+  .section_Gauche{
+  background: #151416;
+  /* height: 80px; */
+  /* width: 50%; */
+  transition: all 0.4s;
+  }
+ 
+
+}
+.grand_titre{
+  color:rgb(230, 234, 238)
+}
+#menu{
+>>>>>>> 78ac7f6 (changement des fons en css)
   z-index: 999;
 }
 
