@@ -2,21 +2,23 @@
 body {
   width: 100%;
   margin: auto;
+  color: #E6EAEE;
+  font-family: calibri;
 }
 
 header {
-  background-color: rgb(50, 190, 50);
+  background-color: #373742;
   max-width: 100%;
   padding: 20px 2px;
   margin: auto;
 }
 
 .myHome {
-  background-color: yellow;
+  background-color: #373742;
   height: 150px;
 }
 .block_Entier{
-background-color: red;
+background-color: #373742;
   padding: 6px 4px;
 }
 @media (max-width: 1265px) {
@@ -67,7 +69,7 @@ line-height: 20px;
 margin: 15px 0;
 }
 nav ul li a{
-color: black;
+color: #E6EAEE;
 font-size: 17px;
 padding: 7px 13px;
 border-radius: 3px;
@@ -91,7 +93,7 @@ margin: 0;
 }
 .section_Gauche {
   width: 200px;
-  background-color: blueviolet;
+  background-color: #373742;
 }
 
 
@@ -101,7 +103,7 @@ ul {
 }
 
 .section_Container {
-  background-color: #470088;
+  background-color: #373742;
 
 }
 
@@ -114,7 +116,7 @@ ul {
 }
 
 .Big_image_Home {
-  background-color: red;
+  background-color: #373742;
   /* width: 732px; */
   height: 406px;
   width: 100%;
@@ -139,7 +141,7 @@ ul {
 .F3,
 .F4 {
   height: 150px;
-  background-color: white;
+  background-color: #4A4A58;
   /* border: 2px solid white; */
   border: 2px solid #000000;
   ;
@@ -158,7 +160,7 @@ ul {
 
 .Meteo {
   height: 216px;
-  background-color: green;
+  background-color: #4A4A58;
 }
 
 .section_droite {
@@ -180,10 +182,25 @@ ul {
    */
   height: 190px;
   width: 203px;
-  background-color: #a53b15;
+  background-color: #4A4A58;
   margin: 4px 4px;
   border-radius: 15px;
 }
+
+.bedroom img{
+  /* height: 100px;
+  width: 150px;
+  background-color: brown;
+  margin: 4px 4px;
+   */
+  height: 190px;
+  width: 203px;
+  margin: 0px;
+  border-radius: 15px;
+}
+
+
+
 
 .section_Container {
   display: flex;
@@ -197,12 +214,12 @@ ul {
 
 .flex_bedroom {
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-start;
   /* flex-wrap: wrap; */
 }
 
 footer {
-  background-color: yellow;
+  background-color: #373742;
   height: 100px;
   width: 100%;
 }
@@ -297,13 +314,13 @@ list-style: none;
   ul a:hover,
   a.active {
     background: none;
-    color: #0082e6;
+    color: #373742;
   }
   #check:checked~.section_droite {
   
   }
   .section_Gauche{
-  background: #470088;
+  background: #373742;
   /* height: 80px; */
   /* width: 50%; */
   transition: all 0.4s;
