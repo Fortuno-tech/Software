@@ -8,24 +8,24 @@
     <title>Document</title>
 </head>
 
-<body>
+<body id="body">
     <div class="block_Entier">
         <header>
             <div>
                 <div style="display: flex;justify-content: space-between;">
                     <div>
-                        <input type="checkbox" id="check" onclick="toggleMenu()">
-                        <span class="grand_titre">Fortico Smart Home</span>
-                    </div>
-                    <div>
-                        <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
-                            <i class="fas fa-bars">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </i>
-                        </label>
-                    </div>
+                    <input type="checkbox" id="check" onclick="toggleMenu()">
+                    <span>Fortico Smart Home</span>
+                </div>
+                <div id="menu">
+                    <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
+                        <i class="fas fa-bars">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </i>
+                    </label>
+                </div>
                 </div>
             </div>
         </header>
@@ -33,37 +33,26 @@
         le navigation  
         -->
         <div class="container">
-            <section class="section_Gauche">
+            <section class="section_Gauche" id="sectionGauche">
                 <div>
-                    <div class="myHome">
-                        <div class="rondImage">
-                            <!-- Image de profil -->
-                            <img src="Images/My_home.jpeg" alt="My home"
-                                style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px;">
-                        <!-- Texte My Home avec flèche -->
-                        <div style="font-size: 16px; margin-bottom: 30px;">
-                            My Home <span
-                                style="font-size: 12px; display: inline-block; transform: rotate(90deg);color: #07CEC9">▶</span>
-                        </div>
-                        </div>
-
-
-                        <!-- Espace vide -->
-                        <div style="flex: 1;"></div>
-                    </div>
+                    <div class="myHome"></div>
                     <div>
                         <nav>
-                            <ul>
-                                <li><a href="">HOME</a></li>
-                                <li><a href="">Devices</a></li>
-                                <li><a href="">Room</a></li>
-                                <li><a href="">add devices</a></li>
-                                <li><a href="">Scene</a></li>
-                                <li><a href="">Acces</a></li>
-                                <li><a href="">Setting</a></li>
+                            <ul class="nav-buttons">
+                                <li><a href="#" class="active"><img src="Icones/homeHigh.png" alt="Home" class="icon-left" data-default="Icones/homeLow.png" data-active="Icones/homeHigh.png"> Home</a></li>
+                                <li><a href="#"><img src="Icones/equipementLow.png" alt="Appareil" class="icon-left" data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png"> Appareil</a></li>
+                                <li><a href="#"><img src="Icones/chambreLow.png" alt="Chambre" class="icon-left" data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png"> Chambre</a></li>
+                                <li><a href="#"><img src="Icones/ajoutLow.png" alt="Ajouter" class="icon-left" data-default="Icones/ajoutLow.png" data-active="Icones/ajoutHigh.png"> Ajout Appareil</a></li>
+                                <li><a href="#"><img src="Icones/botLow.png" alt="Scène" class="icon-left" data-default="Icones/botLow.png" data-active="Icones/botHigh.png"> Scène</a></li>
+                                <li><a href="#"><img src="Icones/accesLow.png" alt="Accès" class="icon-left" data-default="Icones/accesLow.png" data-active="Icones/accesHigh.png"> Accès</a></li>
+                                <li><a href="#"><img src="Icones/parametreLow.png" alt="Paramètre" class="icon-left" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png"> Paramètre</a></li>
                             </ul>
+                            
+                              
+                                                          
                         </nav>
-                    </div>
+                      </div>
+                      
                 </div>
             </section>
             <!-- 
@@ -73,7 +62,7 @@
 
                 <div class="img_fonctionalite">
                     <div class="Big_image_Home">
-                        <img src="Images/téléchargement.jpeg" alt="salle d'accueil" width="100%" height="100%" />
+                        <img src="Images/téléchargement.jpeg" alt="salle d'accueil" width="100%" height="100%"/>
                     </div>
                     <div class="fonctionalite">
                         <div class="F1"></div>
@@ -82,22 +71,46 @@
                         <div class="F4"></div>
                     </div>
                 </div>
-                <!-- 
-            le Meteo sy le sary am sisiny reo bedroom
-             -->
-                <div class="section_droite">
-                    <div class="Meteo"></div>
-                    <div class="flex_bedroom">
-                        <div class="bedroom">
-                            <img src="Images/Master Bedrooms Decor Modern Storage.jpeg" alt="bedroom moderne et épurée"
-                                height="190px" width="203px" style="border-radius: 15px;" />
-                        </div>
-                        <div class="bedroom">
-                            <img src="Images/Décoration moderne et épurée dans véranda.jpeg" alt="bedroom modern"
-                                height="190px" width="203px" style="border-radius: 15px;" />
-                        </div>
-                    </div>
-                </div>
+
+               <div class="section_droite">
+
+                   <div class="Meteo">
+                       <!-- Bloc gauche : Localisation + Date/Heure 
+                        -->
+                       <div class="left-block">
+                         <div class="location">
+                           <img src="/Icones/icons8-place-marker-100.png" alt="Localisation">
+                           <div id="city">Tamatave, 501</div>
+                         </div>
+                         <div class="time-date" id="time-date">Chargement...</div>
+                       </div>
+                     
+                       <!-- Bloc droit : 3 icônes météo -->
+                       <div class="right-block">
+                         <div class="info-block">
+                           <img src="/Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
+                           <div id="weather-value">--%</div>
+                         </div>
+                         <div class="info-block">
+                           <img src="/Icones/icons8-humide-100 (1).png" alt="Humidité">
+                           <div id="humidity">--%</div>
+                         </div>
+                         <div class="info-block">
+                           <img src="/Icones/icons8-température-100 (1).png" alt="Température">
+                           <div id="temp">--°C</div>
+                         </div>
+                       </div>
+                     </div>
+                     <!-- 
+                     Fin de la classe Meteo -->
+                     <div class="flex_bedroom">
+                         <div class="bedroom">
+                             <img src="Images/Master Bedrooms Decor Modern Storage.jpeg" alt="bedroom moderne et épurée" height="190px" width="203px" style="border-radius: 15px;"/>
+                         </div>
+                         <div class="bedroom">
+                             <img src="Images/Décoration moderne et épurée dans véranda.jpeg" alt="bedroom modern" height="190px" width="203px" style="border-radius: 15px;"/>
+                         </div>
+                     </div>
             </section>
         </div>
         <footer>
