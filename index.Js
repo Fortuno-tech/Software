@@ -19,6 +19,22 @@
 // }
 // document.getElementById("menu").addEventListener("click", () => {});
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const check = document.getElementById("check");
     const sectionGauche = document.getElementById("sectionGauche");

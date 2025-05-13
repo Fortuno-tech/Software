@@ -336,7 +336,7 @@ footer {
     display: block;
   }
 
-  .section_Gauche {
+  .section_Gauche { 
     align-items: center;
     position: fixed;
     width: 250px;
