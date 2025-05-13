@@ -51,6 +51,7 @@ header {
   }
 
   .content-section {
+    flex-direction: column;
     display: flex;
     padding: 6px 7px;
     /* height: 90vh; */
@@ -125,7 +126,7 @@ ul {
 }
 
 .content-section {
-  background-color: #000000;
+  background-color: #373742;
 
 }
 
@@ -518,3 +519,91 @@ footer {
   color: #07CEC9; /* Couleur du texte quand actif (bleu par exemple) */
   font-weight: bold;
 }
+
+
+
+
+
+
+/* Style pour les contenu Ajout equipement */
+#section_Ajout {
+  display: flex;
+  flex-direction: column;  /* Les éléments seront alignés verticalement */
+  padding: 10px;
+   /* height: 100vh; Donne une hauteur de 100% de la fenêtre */
+}
+
+.container-top {
+  font-family: Calibri;
+  font-size: 30px;
+  font-weight: bold;
+  color: #E6EAEE;
+  width: 100%;  /* Occupe toute la largeur */
+  background-color: #373742;
+  padding: 0px;
+  text-align:left;
+  border-radius: 10px;
+  margin-bottom: 0px;  /* Espacement sous le conteneur */
+}
+
+
+.containers {
+  display: flex;
+  width: 100%;  /* Prendre toute la largeur disponible */
+  flex-grow: 1;  /* Permet à cette section de prendre toute la hauteur restante */
+}
+.container-right {
+  width: 80%;  /* Conteneur droit occupe 80% de la largeur */
+  background-color: #4A4A58;
+  padding: 20px;
+  height: 100%;
+}
+
+
+
+.container-left {
+  width: 20%;
+  background-color: #373742;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%; /* Prend toute la hauteur dispo */
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.nav-buttonsDevis {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Espace entre les lignes */
+}
+
+.nav-link_devis {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-link_devis:hover {
+  background-color: #5a5a6e;
+}
+
+.nav-link_devis.active {
+  background-color: #3a3a50;
+}
+
+.icon-leftDevis {
+  width: 37px;
+  height: 37px;
+  margin-left: 12px;
+  flex-shrink: 0;
+  display: block;
+}
+/* FinStyle pour les contenu Ajout equipement */
