@@ -6,6 +6,11 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+h1{
+color: white;
+
+
+}
 
 header {
 
@@ -27,7 +32,8 @@ header {
 
 .block_Entier {
   height: 100%;
-  background-color: red;
+  min-height: 100vh;
+  background-color: #373742;
   padding: 6px 4px;
   box-sizing: border-box;
 }
@@ -44,7 +50,7 @@ header {
 
   }
 
-  .section_Container {
+  .content-section {
     display: flex;
     padding: 6px 7px;
     /* height: 90vh; */
@@ -57,7 +63,7 @@ header {
 }
 
 @media (max-width: 1280px) {
-  .section_Container {
+  .content-section{
     display: flex;
     padding: 6px 7px;
     /* height: 90vh; */
@@ -118,8 +124,8 @@ ul {
   margin: 0px;
 }
 
-.section_Container {
-  background-color: #373742;
+.content-section {
+  background-color: #000000;
 
 }
 
@@ -266,7 +272,7 @@ ul {
   border-radius: 15px;
 }
 
-.section_Container {
+.content-section {
   display: flex;
   padding: 6px 7px;
   /* height: 90vh; */
@@ -282,9 +288,9 @@ ul {
 }
 
 footer {
-  background-color: #4A4A58;
+  background-color: #373742;
   border-style: solid;
-  border-color: yellow;
+  border-color: #2A2A32 ;
   height: 100px;
   width: 100%;
 }
@@ -435,7 +441,7 @@ footer {
   width: 80%;
   padding: 10px 15px;
   background-color: transparent;
-  color: #E6EAEE;
+   /* color: #E6EAEE;*/
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -445,8 +451,8 @@ footer {
 .nav-buttons a.active {
   background-color: #2A2A32;
   /* Maintenir la couleur de fond après clic */
-  color: white;
-  /* Facultatif, pour une meilleure lisibilité */
+  /* color: white;
+  Facultatif, pour une meilleure lisibilité */
 }
 
 .nav-buttons a:hover {
@@ -498,4 +504,17 @@ footer {
     gap: 25px;
     margin-top: 20px;
   }
+}
+.nav-link {
+  color: #E6EAEE; /* Couleur normale du texte */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-link.active {
+  color: #07CEC9; /* Couleur du texte quand actif (bleu par exemple) */
+  font-weight: bold;
 }

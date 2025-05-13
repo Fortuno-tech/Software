@@ -56,79 +56,90 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  // -- Script Fortico Navigation + Sections
   const navLinks = document.querySelectorAll('.nav-buttons a');
+  const sections = document.querySelectorAll('.content-section');
+  
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      // Retirer la classe "active" de tous les autres liens
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+  
+      // Supprimer la classe "active" et remettre les images par défaut
       navLinks.forEach(l => {
         l.classList.remove('active');
         const img = l.querySelector('img');
-        img.src = img.getAttribute('data-default'); // Remettre l'image par défaut
+        if (img) img.src = img.getAttribute('data-default');
       });
   
-      // Ajouter la classe "active" au lien cliqué et changer l'image
+      // Ajouter "active" au lien cliqué + changer image
       link.classList.add('active');
       const img = link.querySelector('img');
-      img.src = img.getAttribute('data-active'); // Remplacer l'image par celle d'activation
+      if (img) img.src = img.getAttribute('data-active');
+  
+      // Masquer toutes les sections
+      sections.forEach(section => section.style.display = 'none');
+  
+      // Afficher la section cible
+      const targetId = link.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.style.display = 'flex'; // ou 'block' selon ton layout
+      }
     });
   });
   
   
- //--Scripte concernant la partie weather
-
- const apiKey = "b08faa524136fbdd26068e4faf0f73ee"; //API clé OpenWeatherMap
- const city = "Tamatave,MG";
-
- function updateDateTime() {
-   //Mettre à jour la date et l'heure ,dans notre cas nous avont utiliser le jours en anglais et le mois en francais
-   const jours = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'];
-   const mois = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
-                 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+  // -- Script Horloge Date
+  function updateDateTime() {
+    const jours = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'];
+    const mois = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+                  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+  
+    const now = new Date();
+    const jourAbbr = jours[now.getDay()];
+    const heure = now.getHours().toString().padStart(2, '0');
+    const minute = now.getMinutes().toString().padStart(2, '0');
+    const jourNum = now.getDate();
+    const moisNom = mois[now.getMonth()];
+  
+    document.getElementById("time-date").innerHTML = `${jourNum} ${moisNom}<br>${jourAbbr} ${heure}:${minute}`;
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 60000);
+  
+  
+  // -- Script Météo OpenWeatherMap
+  const apiKey = "b08faa524136fbdd26068e4faf0f73ee";
+  const city = "Tamatave,MG";
+  
+  async function fetchWeather() {
+    try {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`;
+      const response = await fetch(url);
+      const data = await response.json();
+  
+      const temp = Math.round(data.main.temp);
+      const humidity = data.main.humidity;
+      const weatherMain = data.weather[0].main.toLowerCase();
+  
+      document.getElementById("temp").textContent = `${temp}°C`;
+      document.getElementById("humidity").textContent = `${humidity}%`;
+  
+      const rainValue = data.rain && data.rain["1h"] ? `${data.rain["1h"]}mm` : "0mm";
+      document.getElementById("weather-value").textContent = rainValue;
+  
+      const iconMap = {
+        "clear": "/Icones/icons8-soleil-100.png",
+        "clouds": "/Icones/icons8-nuage-100.png",
+        "rain": "/Icones/icons8-pluie-100.png",
+        "drizzle": "/Icones/icons8-pluie-100.png",
+        "thunderstorm": "/Icones/icons8-orage-100.png"
+      };
+      document.getElementById("weather-img").src = iconMap[weatherMain] || "/Icones/icons8-nuage-100.png";
+    } catch (err) {
+      console.error("Erreur météo :", err);
+    }
+  }
+  fetchWeather();
  
-   const now = new Date();
-   const jourAbbr = jours[now.getDay()];
-   const heure = now.getHours().toString().padStart(2, '0');
-   const minute = now.getMinutes().toString().padStart(2, '0');
-   const jourNum = now.getDate();
-   const moisNom = mois[now.getMonth()];
-     
-   document.getElementById("time-date").innerHTML = `${jourNum} ${moisNom}<br>${jourAbbr} ${heure}:${minute}`;
- }
- 
-
- async function fetchWeather() {
-   try {
-   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`;      
-
-     const response = await fetch(url);
-     const data = await response.json();
-
-     const temp = Math.round(data.main.temp);
-     const humidity = data.main.humidity;
-     const weatherMain = data.weather[0].main.toLowerCase();
-
-     document.getElementById("temp").textContent = `${temp}°C`;
-     document.getElementById("humidity").textContent = `${humidity}%`;
-
-     
-     const rainValue = data.rain && data.rain["1h"] ? `${data.rain["1h"]}mm` : "0mm";
-     document.getElementById("weather-value").textContent = rainValue;
-
-     // Changer l’icône selon la condition météo mais dans ce cas nous n'avons pas de l'icone dans notre dossier local et je metter par defaut 
-     const iconMap = {
-       "clear": "/Icones/icons8-soleil-100.png",
-       "clouds": "/Icones/icons8-nuage-100.png",
-       "rain": "/Icones/icons8-pluie-100.png",
-       "drizzle": "/Icones/icons8-pluie-100.png",
-       "thunderstorm": "/Icones/icons8-orage-100.png"
-     };
-     document.getElementById("weather-img").src = iconMap[weatherMain] || "/Icones/icons8-nuage-100.png";
-
-   } catch (err) {
-     console.error("Erreur météo :", err);
-   }
- }
-
- updateDateTime();
- setInterval(updateDateTime, 60000);
- fetchWeather();
+  
