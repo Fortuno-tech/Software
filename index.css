@@ -286,7 +286,6 @@ ul {
 .flex_bedroom {
   display: flex;
   justify-content:flex-start;
-  justify-content: space-evenly;
 }
 
 footer {
@@ -399,7 +398,7 @@ footer {
   #check:checked~.section_droite {}
 
   .section_Gauche {
-    background: #4a4a58;
+    background: #470088;
     /* height: 80px; */
     /* width: 50%; */
     transition: all 0.4s;
@@ -565,7 +564,7 @@ footer {
 .container-left {
   width: 20%;
   background-color: #373742;
-  padding: 0px;
+  padding: 20px;
   border-radius: 10px;
   height: 100%; /* Prend toute la hauteur dispo */
   box-sizing: border-box;
@@ -584,7 +583,6 @@ footer {
 .nav-link_devis {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
