@@ -562,15 +562,32 @@ footer {
 
 
 .container-left {
-  width: 20%;
-  background-color: #373742;
+  /* width: 20%; */
   padding: 20px;
-  border-radius: 10px;
-  height: 100%; /* Prend toute la hauteur dispo */
+  /* border-radius: 10px; */
+  /* height: 60%; */
   box-sizing: border-box;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+  /* border-left: 1px inset rgb(194 194 194); */
+  /* overflow: auto; */
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
+}
+.container-left nav ul li{
+  display: block; 
+    /* margin: 50px 0; */
+    line-height: 20px;
+    margin: 0px;
 }
 
+.container-left nav ul li a {
+  /* color: black; */
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  /* display: block; */
+}
 .nav-buttonsDevis {
   list-style: none;
   padding: 0;
@@ -578,17 +595,20 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0px; /* Espace entre les lignes */
+  /* align-items: center; */
 }
 
 .nav-link_devis {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
+     display: flex;
+align-items: center;
+text-decoration: none;
+color: #fff;
+font-weight: bold;
+/* padding: 10px; */
+border-radius: 8px;
+transition: background 0.3s ease;
+justify-content: space-between;
+
 }
 
 .nav-link_devis:hover {
@@ -606,7 +626,61 @@ footer {
   flex-shrink: 0;
   display: block;
 }
+/* Style pour la section Ajout Appareil */
+.device-category {
+  padding: 20px;
+  color: #E6EAEE;
+}
+
+.device-category h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #5a5a6e;
+  padding-bottom: 10px;
+}
+
+.device-item {
+  background-color: #373742;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.device-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.device-menu {
+  background: none;
+  border: none;
+  color: #E6EAEE;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .containers {
+      flex-direction: column;
+  }
+  
+  .container-left, .container-right {
+      width: 100%;
+  }
+  
+  .device-item {
+      padding: 10px;
+  }
+}
 /* FinStyle pour les contenu Ajout equipement */
+
+
 
 /* Style pour Scène */
 #section_scene {
