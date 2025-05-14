@@ -1,0 +1,39 @@
+/* CSS HEX */
+ --niagara: #049094;
+--blue-whale: #043b42;
+--evening-sea: #044444;
+--black-squeeze: #f0fafa;
+--blue-stone: #045e5f;
+--mosque: #046c6b;_________
+--glacier: #6ec1c1;
+--breaker-bay: #5ca6a6;
+--fountain-blue: #62b4bc;
+--granny-smith: #89a4a1;
+
+
+/* SCSS HEX */
+$niagara: #049094;
+$blue-whale: #043b42;
+$evening-sea: #044444;
+$black-squeeze: #f0fafa;
+$blue-stone: #045e5f;
+$mosque: #046c6b;
+$glacier: #6ec1c1;
+$breaker-bay: #5ca6a6;
+$fountain-blue: #62b4bc;
+$granny-smith: #89a4a1;
+
+
+/* SCSS RGB */
+--niagara: rgba(4,144,148,1);
+--blue-whale: rgba(4,59,66,1);
+--evening-sea: rgba(4,68,68,1);
+--black-squeeze: rgba(240,250,250,1);
+--blue-stone: rgba(4,94,95,1);
+--mosque: rgba(4,108,107,1);
+--glacier: rgba(110,193,193,1);
+--breaker-bay: rgba(92,166,166,1);
+--fountain-blue: rgba(98,180,188,1);
+--granny-smith: rgba(137,164,161,1);
+
+
