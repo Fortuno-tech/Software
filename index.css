@@ -565,7 +565,7 @@ footer {
 .container-left {
   width: 20%;
   background-color: #373742;
-  padding: 20px;
+  padding: 0px;
   border-radius: 10px;
   height: 100%; /* Prend toute la hauteur dispo */
   box-sizing: border-box;
@@ -584,6 +584,7 @@ footer {
 .nav-link_devis {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
