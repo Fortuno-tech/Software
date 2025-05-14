@@ -2,257 +2,282 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body id="body">
-    <div class="block_Entier">
-        <header>
-            <div>
-                <div style="display: flex;justify-content: space-between;">
-                    <div>
-                        <input type="checkbox" id="check" onclick="toggleMenu()">
-                        <span>Fortico Smart Home</span>
-                    </div>
-                    <div id="menu">
-                        <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
-                            <i class="fas fa-bars">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </i>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- GAUCHE 
+  <div class="block_Entier">
+    <header>
+      <div>
+        <div style="display: flex;justify-content: space-between;">
+          <div>
+            <input type="checkbox" id="check" onclick="toggleMenu()">
+            <span>Fortico Smart Home</span>
+          </div>
+          <div id="menu">
+            <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
+              <i class="fas fa-bars">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- GAUCHE 
         le navigation  
         -->
-        <div class="container">
-            <section class="section_Gauche" id="sectionGauche">
-                <div>
-                    <div class="myHome"></div>
-                    <div>
-                        <nav>
-                            <ul class="nav-buttons">
-                                <li>
-                                  <a href="#" class="nav-link active" data-target="content-section">
-                                    <img src="Icones/homeHigh.png" alt="Home" class="icon-left" data-default="Icones/homeLow.png" data-active="Icones/homeHigh.png">
-                                    Home
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="nav-link" data-target="section_Appareil">
-                                    <img src="Icones/equipementLow.png" alt="Appareil" class="icon-left" data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
-                                    Appareil
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="nav-link" data-target="section_Chambre">
-                                    <img src="Icones/chambreLow.png" alt="Chambre" class="icon-left" data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png">
-                                    Chambre
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="nav-link" data-target="section_Ajout">
-                                    <img src="Icones/ajoutLow.png" alt="Ajout" class="icon-left" data-default="Icones/ajoutLow.png" data-active="Icones/ajoutHigh.png">
-                                    Ajout Appareil
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="nav-link" data-target="section_scene">
-                                    <img src="Icones/botLow.png" alt="Scène" class="icon-left" data-default="Icones/botLow.png" data-active="Icones/botHigh.png">
-                                    Scène
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="nav-link" data-target="section_acces">
-                                    <img src="Icones/accesLow.png" alt="Accès" class="icon-left" data-default="Icones/accesLow.png" data-active="Icones/accesHigh.png">
-                                    Accès
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="nav-link" data-target="section_parametre">
-                                    <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-left" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                                    Paramètre
-                                  </a>
-                                </li>
-                              </ul>
-                        </nav>
-                    </div>
+    <div class="container">
+      <section class="section_Gauche" id="sectionGauche">
+        <div>
+          <div class="myHome"></div>
+          <div>
+            <nav>
+              <ul class="nav-buttons">
+                <li>
+                  <a href="#" class="nav-link active" data-target="content-section">
+                    <img src="Icones/homeHigh.png" alt="Home" class="icon-left" data-default="Icones/homeLow.png"
+                      data-active="Icones/homeHigh.png">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-target="section_Appareil">
+                    <img src="Icones/equipementLow.png" alt="Appareil" class="icon-left"
+                      data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
+                    Appareil
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-target="section_Chambre">
+                    <img src="Icones/chambreLow.png" alt="Chambre" class="icon-left"
+                      data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png">
+                    Chambre
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-target="section_Ajout">
+                    <img src="Icones/ajoutLow.png" alt="Ajout" class="icon-left" data-default="Icones/ajoutLow.png"
+                      data-active="Icones/ajoutHigh.png">
+                    Ajout Appareil
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-target="section_scene">
+                    <img src="Icones/botLow.png" alt="Scène" class="icon-left" data-default="Icones/botLow.png"
+                      data-active="Icones/botHigh.png">
+                    Scène
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-target="section_acces">
+                    <img src="Icones/accesLow.png" alt="Accès" class="icon-left" data-default="Icones/accesLow.png"
+                      data-active="Icones/accesHigh.png">
+                    Accès
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link" data-target="section_parametre">
+                    <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-left"
+                      data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
+                    Paramètre
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-                </div>
-            </section>
-            <!-- 
+        </div>
+      </section>
+      <!-- 
         le stricture eo ampoviny rehetra manomnoka eto
         -->
-            <section id="content-section" class="content-section">
+      <section id="content-section" class="content-section">
 
-                <div id="img_fonctionalite" class="img_fonctionalite">
-                    <div class="Big_image_Home">
-                        <img src="Images/téléchargement.jpeg" alt="salle d'accueil" width="100%" height="100%" />
-                    </div>
-                    <div class="fonctionalite">
-                        <div class="F1"></div>
-                        <div class="F2"></div>
-                        <div class="F3"></div>
-                        <div class="F4"></div>
-                    </div>
-                </div>
-
-                <div class="section_droite">
-
-                    <div class="Meteo">
-                        <!-- Bloc gauche : Localisation + Date/Heure 
-                        -->
-                        <div class="left-block">
-                            <div class="location">
-                                <img src="/Icones/icons8-place-marker-100.png" alt="Localisation">
-                                <div id="city">Tamatave, 501</div>
-                            </div>
-                            <div class="time-date" id="time-date">Chargement...</div>
-                        </div>
-
-                        <!-- Bloc droit : 3 icônes météo -->
-                        <div class="right-block">
-                            <div class="info-block">
-                                <img src="/Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
-                                <div id="weather-value">--%</div>
-                            </div>
-                            <div class="info-block">
-                                <img src="/Icones/icons8-humide-100 (1).png" alt="Humidité">
-                                <div id="humidity">--%</div>
-                            </div>
-                            <div class="info-block">
-                                <img src="/Icones/icons8-température-100 (1).png" alt="Température">
-                                <div id="temp">--°C</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 
-                     Fin de la classe Meteo -->
-                    <div class="flex_bedroom">
-                        <div class="bedroom">
-                            <img src="Images/Master Bedrooms Decor Modern Storage.jpeg" alt="bedroom moderne et épurée"
-                                height="190px" width="203px" style="border-radius: 15px;" />
-                        </div>
-                        <div class="bedroom">
-                            <img src="Images/Décoration moderne et épurée dans véranda.jpeg" alt="bedroom modern"
-                                height="190px" width="203px" style="border-radius: 15px;" />
-                        </div>
-                    </div>
-            </section>
-            <!-- Section Appareil -->
-            <section id="section_Appareil" class="content-section" style="display: none;">
-                <h1>Mes Appareils</h1>
-                <p>Contenu des appareils</p>
-            </section>
-
-            <!-- Section Chambre -->
-            <section id="section_Chambre" class="content-section" style="display: none;">
-                <h1>Chambres</h1>
-                <p>Contenu des chambres</p>
-            </section>
-
-<!-- Ajout Appareil -->
-<section id="section_Ajout" class="content-section" style="display: none;">
-    <div class="container-top">
-        <p>Ajout équipements</p>
-    </div>
-    <div class="containers">
-        <div class="container-left">
-                <nav>
-                    <ul class="nav-buttonsDevis">
-                        <li>
-                          <a href="#" class="nav-link_devis active" data-target="content-section">Eclairage
-                            <img src="Icones/homeHigh.png" alt="Home" class="icon-leftDevis" data-default="Icones/homeLow.png" data-active="Icones/homeHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_Appareil"> Prise connecté
-                            <img src="Icones/equipementLow.png" alt="Appareil" class="icon-leftDevis" data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
-                           
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_Chambre">Climatiseur
-                            <img src="Icones/chambreLow.png" alt="Chambre" class="icon-leftDevis" data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_Ajout">Sonnette
-                            <img src="Icones/ajoutLow.png" alt="Ajout" class="icon-leftDevis" data-default="Icones/ajoutLow.png" data-active="Icones/ajoutHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_scene">Station météo
-                            <img src="Icones/botLow.png" alt="Scène" class="icon-leftDevis" data-default="Icones/botLow.png" data-active="Icones/botHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_acces">Détecteur de gaz
-                            <img src="Icones/accesLow.png" alt="Accès" class="icon-leftDevis data-default="Icones/accesLow.png" data-active="Icones/accesHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_parametre">Détecteur de présence
-                            <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link_devis" data-target="section_parametre">Capteur Température et humidité
-                              <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                              
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" class="nav-link_devis" data-target="section_parametre">Détecteur de porte
-                              <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                              
-                            </a>
-                          </li>
-                      </ul>
-                </nav>
+        <div id="img_fonctionalite" class="img_fonctionalite">
+          <div class="Big_image_Home">
+            <img src="Images/téléchargement.jpeg" alt="salle d'accueil" width="100%" height="100%" />
+          </div>
+          <div class="fonctionalite">
+            <div class="F1"></div>
+            <div class="F2"></div>
+            <div class="F3"></div>
+            <div class="F4"></div>
+          </div>
         </div>
-        <div class="container-right">
+
+        <div class="section_droite">
+
+          <div class="Meteo">
+            <!-- Bloc gauche : Localisation + Date/Heure 
+                        -->
+            <div class="left-block">
+              <div class="location">
+                <img src="/Icones/icons8-place-marker-100.png" alt="Localisation">
+                <div id="city">Tamatave, 501</div>
+              </div>
+              <div class="time-date" id="time-date">Chargement...</div>
+            </div>
+
+            <!-- Bloc droit : 3 icônes météo -->
+            <div class="right-block">
+              <div class="info-block">
+                <img src="/Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
+                <div id="weather-value">--%</div>
+              </div>
+              <div class="info-block">
+                <img src="/Icones/icons8-humide-100 (1).png" alt="Humidité">
+                <div id="humidity">--%</div>
+              </div>
+              <div class="info-block">
+                <img src="/Icones/icons8-température-100 (1).png" alt="Température">
+                <div id="temp">--°C</div>
+              </div>
+            </div>
+          </div>
+          <!-- 
+                     Fin de la classe Meteo -->
+          <div class="flex_bedroom">
+            <div class="bedroom">
+              <img src="Images/Master Bedrooms Decor Modern Storage.jpeg" alt="bedroom moderne et épurée" height="190px"
+                width="203px" style="border-radius: 15px;" />
+            </div>
+            <div class="bedroom">
+              <img src="Images/Décoration moderne et épurée dans véranda.jpeg" alt="bedroom modern" height="190px"
+                width="203px" style="border-radius: 15px;" />
+            </div>
+          </div>
+      </section>
+      <!-- Section Appareil -->
+      <section id="section_Appareil" class="content-section" style="display: none;">
+        <h1>Mes Appareils</h1>
+        <p>Contenu des appareils</p>
+      </section>
+
+      <!-- Section Chambre -->
+      <section id="section_Chambre" class="content-section" style="display: none;">
+        <h1>Chambres</h1>
+        <p>Contenu des chambres</p>
+      </section>
+
+      <!-- Ajout Appareil -->
+      <section id="section_Ajout" class="content-section" style="display: none;">
+        <div class="container-top">
+          <p>Ajout équipements</p>
+        </div>
+        <div class="containers">
+          <div class="container-left">
+            <nav>
+              <ul class="nav-buttonsDevis">
+                <li>
+                  <a href="#" class="nav-link_devis active" data-target="content-section">Eclairage
+                    <img src="Icones/homeHigh.png" alt="Home" class="icon-leftDevis" data-default="Icones/homeLow.png"
+                      data-active="Icones/homeHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_Appareil"> Prise connecté
+                    <img src="Icones/equipementLow.png" alt="Appareil" class="icon-leftDevis"
+                      data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_Chambre">Climatiseur
+                    <img src="Icones/chambreLow.png" alt="Chambre" class="icon-leftDevis"
+                      data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_Ajout">Sonnette
+                    <img src="Icones/ajoutLow.png" alt="Ajout" class="icon-leftDevis" data-default="Icones/ajoutLow.png"
+                      data-active="Icones/ajoutHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_scene">Station météo
+                    <img src="Icones/botLow.png" alt="Scène" class="icon-leftDevis" data-default="Icones/botLow.png"
+                      data-active="Icones/botHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_acces">Détecteur de gaz
+                    <img src="Icones/accesLow.png" alt="Accès" class="icon-leftDevis data-default=" Icones/accesLow.png"
+                      data-active="Icones/accesHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_parametre">Détecteur de présence
+                    <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis"
+                      data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_parametre">Capteur Température et humidité
+                    <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis"
+                      data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link_devis" data-target="section_parametre">Détecteur de porte
+                    <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis"
+                      data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
+
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="container-right">
             <!-- Contenu du second conteneur -->
             <p>Conteneur droit</p>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
 
-            <!-- Section Appareil -->
-            <section id="section_scene" class="content-section" style="display: none;">
-                <h1>Scene</h1>
-                <p>Contenu des Scene</p>
-            </section>
-            <!-- Section Appareil -->
-            <section id="section_acces" class="content-section" style="display: none;">
-                <h1>Acces</h1>
-                <p>Contenu des acces</p>
-            </section>
-            <!-- Section Appareil -->
-            <section id="section_parametre" class="content-section" style="display: none;">
-                <h1>parametre</h1>
-                <p>Contenu des parametre</p>
-            </section>
+      <!-- Section Appareil -->
+      <section id="section_scene" class="content-section">
+        <div class="conteneur-hautScene">
+          <p>Scène</p>
         </div>
-        <footer>
+        <div class="conteneur-basScene">
+          <p>Cette page n’est pas encore disponible</p>
+        </div>
+      </section>
 
-        </footer>
+      <!-- Section Appareil -->
+      <section id="section_acces" class="content-section" style="display: none;">
+        <div class="conteneur-hautAcces">
+          <p>Acces</p>
+        </div>
+        <div class="conteneur-basAcces">
+          <p>Cette page n’est pas encore disponible</p>
+        </div>
+      </section>
+      <!-- Section Appareil -->
+      <section id="section_parametre" class="content-section" style="display: none;">
+        <h1>parametre</h1>
+        <p>Contenu des parametre</p>
+      </section>
     </div>
-    <script src="./index.Js"></script>
+    <footer>
+
+    </footer>
+  </div>
+  <script src="./index.Js"></script>
 </body>
 
 </html>

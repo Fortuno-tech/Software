@@ -607,3 +607,99 @@ footer {
   display: block;
 }
 /* FinStyle pour les contenu Ajout equipement */
+
+/* Style pour Scène */
+#section_scene {
+  display: none;
+  position: relative;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.conteneur-hautScene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background-color: #373742;
+  z-index: 2;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.conteneur-hautScene p{
+  font-family: Calibri;
+  font-size: 30px;
+  font-weight: bold;
+  color: #E6EAEE;
+  text-align: left;
+}
+
+.conteneur-basScene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%; 
+  background-color: #4A4A58;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.conteneur-basScene p {
+color: #b8babd;
+font-size: 20px;
+}
+
+
+/* Fin Style pour Scène */
+
+/* Fin Style pour Acces */
+#section_acces {
+  display: none;
+  position: relative;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.conteneur-hautAcces {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background-color: #373742;
+  z-index: 2;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.conteneur-hautAcces p{
+  font-family: Calibri;
+  font-size: 30px;
+  font-weight: bold;
+  color: #E6EAEE;
+  text-align: left;
+}
+
+.conteneur-basAcces {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%; 
+  background-color: #4A4A58;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.conteneur-basAcces p {
+color: #b8babd;
+font-size: 20px;
+}
+
