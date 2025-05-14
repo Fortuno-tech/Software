@@ -398,7 +398,7 @@ footer {
   #check:checked~.section_droite {}
 
   .section_Gauche {
-    background: #470088;
+    background: #4a4a58;
     /* height: 80px; */
     /* width: 50%; */
     transition: all 0.4s;
