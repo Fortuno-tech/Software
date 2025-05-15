@@ -27,7 +27,7 @@ header {
   height: 170px;
   background-color: #373742;
   border-style: solid;
-  border-color: yellow;
+  border-color: #595968;
 }
 
 .block_Entier {
@@ -433,12 +433,12 @@ footer {
   /* 👈 Contrôle direct de la hauteur */
   /*  padding: 0 15px; 👈 Padding vertical retiré pour ne pas dépasser la hauteur */
   display: flex;
-  text-align: center;
+  text-align:left;
   align-items: center;
   justify-content: flex-start;
   gap: 25px;
   font-family: Calibri;
-  font-size: 20px;
+  font-size: 19px;
   width: 80%;
   padding: 10px 15px;
   background-color: transparent;
@@ -535,15 +535,14 @@ footer {
 
 .container-top {
   font-family: Calibri;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
   color: #E6EAEE;
   width: 100%;  /* Occupe toute la largeur */
   background-color: #373742;
-  padding: 0px;
+  padding-left: 20px;
   text-align:left;
-  border-radius: 10px;
-  margin-bottom: 0px;  /* Espacement sous le conteneur */
+
 }
 
 
@@ -553,25 +552,17 @@ footer {
   flex-grow: 1;  /* Permet à cette section de prendre toute la hauteur restante */
 }
 .container-right {
-  width: 80%;  /* Conteneur droit occupe 80% de la largeur */
+  width: 70%;  /* Conteneur droit occupe 80% de la largeur */
   background-color: #4A4A58;
-  padding: 20px;
   height: 100%;
 }
 
 
 
 .container-left {
-  /* width: 20%; */
-  padding: 20px;
-  /* border-radius: 10px; */
-  /* height: 60%; */
-  box-sizing: border-box;
-  /* overflow-y: auto; */
-  /* border-left: 1px inset rgb(194 194 194); */
-  /* overflow: auto; */
-  /* scrollbar-width: none;
-  -ms-overflow-style: none; */
+width: 30%;
+padding: 10px;
+box-sizing: border-box;
 }
 .container-left nav ul li{
   display: block; 
@@ -580,12 +571,13 @@ footer {
     margin: 0px;
 }
 
-.container-left nav ul li a {
+.container-left nav ul li button {
   /* color: black; */
-  font-size: 13px;
+  font-size: 20px;
+  text-align:left;
   padding: 7px 13px;
-  border-radius: 3px;
-  text-decoration: none;
+  color: #ffffff98;
+  font-weight:lighter;
   /* display: block; */
 }
 .nav-buttonsDevis {
@@ -599,55 +591,104 @@ footer {
 }
 
 .nav-link_devis {
-     display: flex;
+  background-color: transparent;
+  width: 90%;
+  cursor: pointer;
+display: flex;
 align-items: center;
 text-decoration: none;
-color: #fff;
-font-weight: bold;
 /* padding: 10px; */
-border-radius: 8px;
-transition: background 0.3s ease;
+transition: background 0.3s ease, transform 0.3s ease; /* Ajout de transform */
 justify-content: space-between;
+border: none;
 
 }
 
+
 .nav-link_devis:hover {
-  background-color: #5a5a6e;
+  color:#E6EAEE;
+  font-weight: bold;
+
 }
 
 .nav-link_devis.active {
-  background-color: #3a3a50;
+  color:#E6EAEE;
+  font-weight: bold;
+}
+.nav-link_devis img {
+  transition: transform 0.3s ease;
+}
+.nav-link_devis.active img {
+  transform: scale(1.15);
+}
+
+.nav-link_devis:hover img {
+  transform: scale(1.15); /* Agrandit l'image à 120% */
+}
+.section-content {
+  color: #E6EAEE;
+  font-weight:bold;
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+  display: none;
+}
+
+.section-content.active {
+  display: block;
+}
+/* Partie haute */
+.detailHaut {
+  width: 100%;
+  padding: 20px;
+  background-color: #1E1E2F;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Partie basse */
+.detailBas {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #2B2B3F;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Boutons de navigation */
+.retour {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+}
+
+.retour button {
+  background-color: #3C3C5A;
+  color: #E6EAEE;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.retour button:hover {
+  background-color: #56567B;
 }
 
 .icon-leftDevis {
-  width: 37px;
-  height: 37px;
+  width: 32px;
+  height: 32px;
   margin-left: 12px;
   flex-shrink: 0;
   display: block;
 }
 /* Style pour la section Ajout Appareil */
-.device-category {
-  padding: 20px;
-  color: #E6EAEE;
-}
-
-.device-category h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  border-bottom: 1px solid #5a5a6e;
-  padding-bottom: 10px;
-}
-
-.device-item {
-  background-color: #373742;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .device-info {
   display: flex;
@@ -655,29 +696,41 @@ justify-content: space-between;
   width: 100%;
 }
 
+.device-item {
+  background-color: transparent;         /* fond transparent */
+  padding: 15px;
+  margin-bottom: 10px;
+
+  border-bottom: 2px solid #e6eaee60;         /* petite ligne pour démarquer le bas */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .device-menu {
   background: none;
   border: none;
   color: #E6EAEE;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bolder;
   cursor: pointer;
   padding: 0 10px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .containers {
-      flex-direction: column;
-  }
-  
-  .container-left, .container-right {
-      width: 100%;
-  }
-  
-  .device-item {
-      padding: 10px;
-  }
+.device-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:#E6EAEE;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 15px 80px;
+
 }
+
 /* FinStyle pour les contenu Ajout equipement */
 
 

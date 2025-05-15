@@ -159,3 +159,56 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchWeather();
  
   
+  // Script pour ajout apparéil
+
+
+
+
+
+
+
+
+
+
+
+  const buttons = document.querySelectorAll('.nav-link_devis');
+  const sections1 = document.querySelectorAll('.section-content');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+
+      // Cacher toutes les sections
+      sections1.forEach(section => section.classList.remove('active'));
+
+      // Afficher la section ciblée
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+
+      // Gérer les classes actives pour les boutons (facultatif)
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+
+ // Détail éclairage
+
+ function showDetail(button) {
+  const targetId = button.getAttribute('data-target');
+
+  // Masquer toutes les sections
+  document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+
+  // Afficher la section cible
+  document.getElementById(targetId).classList.add('active');
+}
+
+function goBack() {
+  // Masquer toutes les sections
+  document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+
+  // Réafficher la liste des modules
+  document.getElementById('section-Eclairage').classList.add('active');
+}

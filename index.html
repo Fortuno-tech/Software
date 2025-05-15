@@ -43,14 +43,14 @@
                   <a href="#" class="nav-link active" data-target="content-section">
                     <img src="Icones/homeHigh.png" alt="Home" class="icon-left" data-default="Icones/homeLow.png"
                       data-active="Icones/homeHigh.png">
-                    Home
+                    Acceuil
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_Appareil">
                     <img src="Icones/equipementLow.png" alt="Appareil" class="icon-left"
                       data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
-                    Appareil
+                    Appareils
                   </a>
                 </li>
                 <li>
@@ -135,7 +135,7 @@
                 <div id="humidity">--%</div>
               </div>
               <div class="info-block">
-                <img src="/Icones/icons8-température-100 (1).png" alt="Température">
+                <img src="/Icones/temperature.png" alt="Température">
                 <div id="temp">--°C</div>
               </div>
             </div>
@@ -166,131 +166,184 @@
       </section>
 
       <!-- Ajout Appareil -->
-<section id="section_Ajout" class="content-section" style="display: none;">
-    <div class="container-top">
-        <p>Ajout équipements</p>
-    </div>
-    <div class="containers">
-        <div class="container-left">
-                <nav>
-                    <ul class="nav-buttonsDevis">
-                        <li>
-                          <a href="#" class="nav-link_devis active" data-target="content-section">Eclairage
-                            <img src="Icones/homeHigh.png" alt="Home" class="icon-leftDevis" data-default="Icones/homeLow.png" data-active="Icones/homeHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_Appareil"> Prise connecté
-                            <img src="Icones/equipementLow.png" alt="Appareil" class="icon-leftDevis" data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
-                           
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_Chambre">Climatiseur
-                            <img src="Icones/chambreLow.png" alt="Chambre" class="icon-leftDevis" data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_Ajout">Sonnette
-                            <img src="Icones/ajoutLow.png" alt="Ajout" class="icon-leftDevis" data-default="Icones/ajoutLow.png" data-active="Icones/ajoutHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_scene">Station météo
-                            <img src="Icones/botLow.png" alt="Scène" class="icon-leftDevis" data-default="Icones/botLow.png" data-active="Icones/botHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_acces">Détecteur de gaz
-                            <img src="Icones/accesLow.png" alt="Accès" class="icon-leftDevis data-default="Icones/accesLow.png" data-active="Icones/accesHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="nav-link_devis" data-target="section_parametre">Détecteur de présence
-                            <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                            
-                          </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link_devis" data-target="section_parametre">Capteur Température et humidité
-                              <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                              
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" class="nav-link_devis" data-target="section_parametre">Détecteur de porte
-                              <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-leftDevis" data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
-                              
-                            </a>
-                          </li>
-                      </ul>
-                </nav>
+      <section id="section_Ajout" class="content-section" style="display: none;">
+        <div class="container-top">
+          <p>Ajout équipements</p>
         </div>
-            <!--
+        <div class="containers">
+          <div class="container-left">
+            <nav>
+              <ul class="nav-buttonsDevis">
+                <li>
+                  <button class="nav-link_devis active" data-target="section-Eclairage">
+                    Eclairage
+                    <img src="Icones/lumiere.png" alt="Eclairage" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Prise">
+                    Prise connectée
+                    <img src="Icones/prise.png" alt="Prise connectée" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Climatiseur">
+                    Climatiseur
+                    <img src="Icones/clim.png" alt="Climatiseur" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Sonnette">
+                    Sonnette
+                    <img src="Icones/sonnette.png" alt="Sonnette" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Station">
+                    Station météo
+                    <img src="Icones/nuage.png" alt="Station météo" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Gaz">
+                    Détecteur de gaz
+                    <img src="Icones/smoke.png" alt="Détecteur de gaz" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Presence">
+                    Détecteur de présence
+                    <img src="Icones/mouvement.png" alt="Détecteur de présence" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Temperature">
+                    Capteur Température et humidité
+                    <img src="Icones/temperature.png" alt="Température et humidité" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Porte">
+                    Détecteur de porte
+                    <img src="Icones/porte.png" alt="Détecteur de porte" class="icon-leftDevis">
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+          <!--
          Nouveau contenu pour la partie droite 
              -->
-        <div class="container-right">
-            <!-- Contenu du second conteneur -->
-            <div class="device-category">
-              <h2>Eclairage</h2>
-              <div class="device-item">
+             <div class="container-right">
+              <!-- Section liste des modules -->
+               
+              <div id="section-Eclairage" class="section-content active">
+                
+                <div class="device-item">
                   <div class="device-info">
-                      <span>Smart switch V1 M1</span>
-                      <button class="device-menu">⋮</button>
+                    <button class="device-button" data-target="detail-m1" onclick="showDetail(this)">
+                      Smart switch V1 M1
+                    </button>
+                    <button class="device-menu">⋮</button>
                   </div>
-              </div>
-              <div class="device-item">
+                </div>
+                <div class="device-item">
                   <div class="device-info">
-                      <span>Smart switch V1 M2</span>
-                      <button class="device-menu">⋮</button>
+                    <button class="device-button" data-target="detail-m2" onclick="showDetail(this)">
+                      Smart switch V1 M2
+                    </button>
+                    <button class="device-menu">⋮</button>
                   </div>
-              </div>
-              <div class="device-item">
+                </div>
+                <div class="device-item">
                   <div class="device-info">
-                      <span>Smart switch V3 M1</span>
-                      <button class="device-menu">⋮</button>
+                    <button class="device-button" data-target="detail-m3" onclick="showDetail(this)">
+                      Smart switch V3 M1
+                    </button>
+                    <button class="device-menu">⋮</button>
                   </div>
+                </div>
               </div>
+            
+              <!-- Détails de chaque module déjà présents -->
+
+              <div id="detail-m1" class="section-content">
+
+                <div class="detailHaut">
+
+                </div>
+                <div class="detailBas">
+                </div>
+
+                <div class= "retour">
+                <button onclick="goBack()">⬅ Retour</button>
+                <button onclick="suivant()">Suivant</button>
+              </div>
+            </div>
+          
+           
+            
+
+
+              <div id="detail-m2" class="section-content">
+                <h2>Smart switch V1 M2</h2>
+                <p>Identifiant : m2</p>
+                <p>Status : En ligne</p>
+                <button onclick="goBack()">⬅ Retour</button>
+              </div>
+            
+              <div id="detail-m3" class="section-content">
+                <h2>Smart switch V3 M1</h2>
+                <p>Identifiant : m3</p>
+                <p>Status : En ligne</p>
+                <button onclick="goBack()">⬅ Retour</button>
+              </div>
+            
+
+
+            <div id="section_Prise" class="section-content">Contenu Prise connectée</div>
+            <div id="section_Climatiseur" class="section-content">Contenu Climatiseur</div>
+            <div id="section_Sonnette" class="section-content">Contenu Sonnette</div>
+            <div id="section_Station" class="section-content">Contenu Station météo</div>
+            <div id="section_Gaz" class="section-content">Contenu Détecteur de gaz</div>
+            <div id="section_Presence" class="section-content">Contenu Détecteur de présence</div>
+            <div id="section_Temperature" class="section-content">Contenu Température et humidité</div>
+            <div id="section_Porte" class="section-content">Contenu Détecteur de porte</div>
           </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Section Appareil -->
+    <section id="section_scene" class="content-section" style="display: none;">
+      <div class="conteneur-hautScene">
+        <p>Scène</p>
       </div>
-        </div>
-    </div>
-</section>
+      <div class="conteneur-basScene">
+        <p>Cette page n’est pas encore disponible</p>
+      </div>
+    </section>
 
+    <!-- Section Appareil -->
+    <section id="section_acces" class="content-section" style="display: none;">
+      <div class="conteneur-hautAcces">
+        <p>Acces</p>
+      </div>
+      <div class="conteneur-basAcces">
+        <p>Cette page n’est pas encore disponible</p>
+      </div>
+    </section>
+    <!-- Section Appareil -->
+    <section id="section_parametre" class="content-section" style="display: none;">
+      <h1>parametre</h1>
+      <p>Contenu des parametre</p>
+    </section>
+  </div>
+  <footer>
 
-      <!-- Section Appareil -->
-      <section id="section_scene" class="content-section" style="display: none;">
-        <div class="conteneur-hautScene">
-          <p>Scène</p>
-        </div>
-        <div class="conteneur-basScene">
-          <p>Cette page n’est pas encore disponible</p>
-        </div>
-      </section>
-
-      <!-- Section Appareil -->
-      <section id="section_acces" class="content-section" style="display: none;">
-        <div class="conteneur-hautAcces">
-          <p>Acces</p>
-        </div>
-        <div class="conteneur-basAcces">
-          <p>Cette page n’est pas encore disponible</p>
-        </div>
-      </section>
-      <!-- Section Appareil -->
-      <section id="section_parametre" class="content-section" style="display: none;">
-        <h1>parametre</h1>
-        <p>Contenu des parametre</p>
-      </section>
-    </div>
-    <footer>
-
-    </footer>
+  </footer>
   </div>
   <script src="./index.Js"></script>
 </body>
