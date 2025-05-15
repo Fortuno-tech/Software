@@ -542,6 +542,7 @@ footer {
   background-color: #373742;
   padding-left: 20px;
   text-align:left;
+  height: 12%;
 
 }
 
@@ -552,7 +553,7 @@ footer {
   flex-grow: 1;  /* Permet à cette section de prendre toute la hauteur restante */
 }
 .container-right {
-  width: 70%;  /* Conteneur droit occupe 80% de la largeur */
+  width: 72%;  /* Conteneur droit occupe 80% de la largeur */
   background-color: #4A4A58;
   height: 100%;
 }
@@ -560,7 +561,7 @@ footer {
 
 
 .container-left {
-width: 30%;
+width: 25%;
 padding: 10px;
 box-sizing: border-box;
 }
@@ -573,9 +574,10 @@ box-sizing: border-box;
 
 .container-left nav ul li button {
   /* color: black; */
-  font-size: 20px;
+  font-size: 17px;
   text-align:left;
   padding: 7px 13px;
+  padding-bottom: 15px;
   color: #ffffff98;
   font-weight:lighter;
   /* display: block; */
@@ -637,49 +639,113 @@ border: none;
 .section-content.active {
   display: block;
 }
-/* Partie haute */
-.detailHaut {
-  width: 100%;
-  padding: 20px;
-  background-color: #1E1E2F;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  text-align: center;
-}
 
-/* Partie basse */
-.detailBas {
+#detail-m1 {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: 20px;
-  background-color: #2B2B3F;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  text-align: center;
+  overflow: hidden;
 }
 
-/* Boutons de navigation */
+/* Ces deux divs vont se superposer exactement */
+.detailHaut{
+  position: relative;
+  width: 100%;
+  height: 10%;
+}
+
+
+
+/* Optionnel : ajouter un fond pour visualiser */
+.detailHaut {
+  z-index: 1;
+}
+.detailHaut h2 {
+ color: #E6EAEE;
+ font-size: 25px;
+ font-weight: bolder;
+}
+
+.detailBas {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+.detailBas h3 {
+color: #b8babd;
+font-size: 20px;
+font-weight: bolder;
+}
+.icon-module {
+  width: 50%;
+  height: auto; /* pour garder les proportions */
+}
+
+/* Boutons en bas */
 .retour {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-top: auto;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 3;
 }
 
 .retour button {
-  background-color: #3C3C5A;
-  color: #E6EAEE;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  flex: 1;
+  max-width: 160px;
+  margin: 0 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.retour button:hover {
-  background-color: #56567B;
+
+/* Style spécifique pour "Suivant" */
+.btn-suivant {
+  border: 3px solid #07CEC9;       /* Bordure rouge bien visible */
+  background-color: transparent;   /* Fond transparent */
+  color:#07CEC9;                  /* Texte rouge aussi (ou blanc si tu préfères) */
+  border-radius: 30px;             /* Coins arrondis */
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.btn-suivant:hover {
+  background-color: #07CEC9;       /* Au survol : fond rouge */
+  color:#E6EAEE;                    /* Texte devient blanc */
+}
+.btn-retour {
+  border: 3px solid #E6EAEE;       /* Bordure rouge bien visible */
+  background-color: transparent;   /* Fond transparent */
+  color:#E6EAEE;                  /* Texte rouge aussi (ou blanc si tu préfères) */
+  border-radius: 30px;             /* Coins arrondis */
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-retour:hover {
+  background-color: #E6EAEE;       /* Au survol : fond rouge */
+  color:#2A2A32;                    /* Texte devient blanc */
+}
+
 
 .icon-leftDevis {
   width: 32px;
@@ -701,7 +767,7 @@ border: none;
   padding: 15px;
   margin-bottom: 10px;
 
-  border-bottom: 2px solid #e6eaee60;         /* petite ligne pour démarquer le bas */
+  border-bottom: 2px solid #eee6e660;         /* petite ligne pour démarquer le bas */
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -235,71 +235,78 @@
           <!--
          Nouveau contenu pour la partie droite 
              -->
-             <div class="container-right">
-              <!-- Section liste des modules -->
-               
-              <div id="section-Eclairage" class="section-content active">
-                
-                <div class="device-item">
-                  <div class="device-info">
-                    <button class="device-button" data-target="detail-m1" onclick="showDetail(this)">
-                      Smart switch V1 M1
-                    </button>
-                    <button class="device-menu">⋮</button>
-                  </div>
-                </div>
-                <div class="device-item">
-                  <div class="device-info">
-                    <button class="device-button" data-target="detail-m2" onclick="showDetail(this)">
-                      Smart switch V1 M2
-                    </button>
-                    <button class="device-menu">⋮</button>
-                  </div>
-                </div>
-                <div class="device-item">
-                  <div class="device-info">
-                    <button class="device-button" data-target="detail-m3" onclick="showDetail(this)">
-                      Smart switch V3 M1
-                    </button>
-                    <button class="device-menu">⋮</button>
-                  </div>
+          <div class="container-right">
+            <!-- Section liste des modules -->
+
+            <div id="section-Eclairage" class="section-content active">
+
+              <div class="device-item">
+                <div class="device-info">
+                  <button class="device-button" data-target="detail-m1" onclick="showDetail(this)">
+                    Smart switch V1 M1
+                  </button>
+                  <button class="device-menu">⋮</button>
                 </div>
               </div>
-            
-              <!-- Détails de chaque module déjà présents -->
-
-              <div id="detail-m1" class="section-content">
-
-                <div class="detailHaut">
-
+              <div class="device-item">
+                <div class="device-info">
+                  <button class="device-button" data-target="detail-m2" onclick="showDetail(this)">
+                    Smart switch V1 M2
+                  </button>
+                  <button class="device-menu">⋮</button>
                 </div>
-                <div class="detailBas">
+              </div>
+              <div class="device-item">
+                <div class="device-info">
+                  <button class="device-button" data-target="detail-m3" onclick="showDetail(this)">
+                    Smart switch V3 M1
+                  </button>
+                  <button class="device-menu">⋮</button>
                 </div>
-
-                <div class= "retour">
-                <button onclick="goBack()">⬅ Retour</button>
-                <button onclick="suivant()">Suivant</button>
               </div>
             </div>
-          
-           
-            
+
+            <!-- Détails de chaque module déjà présents -->
+
+            <div id="detail-m1" class="section-content">
+
+              <div class="detailHaut">
+                <h2>
+                  Brancher votre appareille
+                </h2>
+              </div>
+              <div class="detailBas">
+                <img src="Icones/module.png" class="icon-module">
+                <h3>
+                  Veuillez vous assurer que le voyant vert
+                  s’allume.
+                </h3>
+              </div>
+
+              <div class="retour">
+                <button class="btn-retour" onclick="goBack()">⬅ Retour</button>
+                <button class="btn-suivant" onclick="suivant()">Suivant ➡</button>
+              </div>
+            </div>
 
 
-              <div id="detail-m2" class="section-content">
-                <h2>Smart switch V1 M2</h2>
-                <p>Identifiant : m2</p>
-                <p>Status : En ligne</p>
-                <button onclick="goBack()">⬅ Retour</button>
-              </div>
-            
-              <div id="detail-m3" class="section-content">
-                <h2>Smart switch V3 M1</h2>
-                <p>Identifiant : m3</p>
-                <p>Status : En ligne</p>
-                <button onclick="goBack()">⬅ Retour</button>
-              </div>
-            
+
+
+
+            <div id="detail-m2" class="section-content">
+              <h2>Smart switch V1 M2</h2>
+              <p>Identifiant : m2</p>
+              <p>Status : En ligne</p>
+              <button onclick="goBack()">⬅ Retour</button>
+            </div>
+
+            <div id="detail-m3" class="section-content">
+              <h2>Smart switch V3 M1</h2>
+              <p>Identifiant : m3</p>
+              <p>Status : En ligne</p>
+              <button onclick="goBack()">⬅ Retour</button>
+            </div>
+
 
 
             <div id="section_Prise" class="section-content">Contenu Prise connectée</div>
