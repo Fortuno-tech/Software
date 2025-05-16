@@ -709,9 +709,7 @@ footer {
   flex-direction: column;
 }
 
-#detailBasWifi {
-  height: 115%;
-}
+
 
 .input-wifi {
   width: 100%;
@@ -844,6 +842,7 @@ height: auto;
   position: relative;
   width: 100%;
   height: 110%;
+  overflow: visible;
 }
 
 .detailBas h3 {
@@ -860,6 +859,7 @@ height: auto;
 
 /* Boutons en bas */
 .retour {
+  margin-top: 20px;
   position: absolute;
   bottom: 20px;
   left: 0;
