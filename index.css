@@ -6,8 +6,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-h1{
-color: white;
+
+h1 {
+  color: white;
 
 
 }
@@ -16,7 +17,7 @@ header {
 
   background-color: #373742;
   border-style: solid;
-  border-color: #2A2A32 ;
+  border-color: #2A2A32;
   max-width: 100%;
   padding: 20px 2px;
   margin: auto;
@@ -64,7 +65,7 @@ header {
 }
 
 @media (max-width: 1280px) {
-  .content-section{
+  .content-section {
     display: flex;
     padding: 6px 7px;
     /* height: 90vh; */
@@ -180,7 +181,7 @@ ul {
   /* height: 100vh; */
 }
 
- /* .Meteo {
+/* .Meteo {
   height: 216px;
   background-color: #4A4A58;
   border-style: solid;
@@ -191,7 +192,7 @@ ul {
   margin: 0px auto;
   padding: 5px 5px;
   background-color: #373742;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -259,6 +260,7 @@ ul {
   height: min-content;
   width: 100%;
   margin-top: 10px;
+  overflow: visible;
   /* padding: 2px 18px; */
 }
 
@@ -285,13 +287,11 @@ ul {
 
 .flex_bedroom {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 footer {
   background-color: #373742;
-  border-style: solid;
-  border-color: #2A2A32 ;
   height: 100px;
   width: 100%;
 }
@@ -337,7 +337,7 @@ footer {
     display: block;
   }
 
-  .section_Gauche { 
+  .section_Gauche {
     align-items: center;
     position: fixed;
     width: 250px;
@@ -433,7 +433,7 @@ footer {
   /* 👈 Contrôle direct de la hauteur */
   /*  padding: 0 15px; 👈 Padding vertical retiré pour ne pas dépasser la hauteur */
   display: flex;
-  text-align:left;
+  text-align: left;
   align-items: center;
   justify-content: flex-start;
   gap: 25px;
@@ -442,7 +442,7 @@ footer {
   width: 80%;
   padding: 10px 15px;
   background-color: transparent;
-   /* color: #E6EAEE;*/
+  /* color: #E6EAEE;*/
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -506,8 +506,10 @@ footer {
     margin-top: 20px;
   }
 }
+
 .nav-link {
-  color: #E6EAEE; /* Couleur normale du texte */
+  color: #E6EAEE;
+  /* Couleur normale du texte */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -516,7 +518,8 @@ footer {
 }
 
 .nav-link.active {
-  color: #07CEC9; /* Couleur du texte quand actif (bleu par exemple) */
+  color: #07CEC9;
+  /* Couleur du texte quand actif (bleu par exemple) */
   font-weight: bold;
 }
 
@@ -528,9 +531,10 @@ footer {
 /* Style pour les contenu Ajout equipement */
 #section_Ajout {
   display: flex;
-  flex-direction: column;  /* Les éléments seront alignés verticalement */
+  flex-direction: column;
+  /* Les éléments seront alignés verticalement */
   padding: 10px;
-   /* height: 100vh; Donne une hauteur de 100% de la fenêtre */
+  /* height: 100vh; Donne une hauteur de 100% de la fenêtre */
 }
 
 .container-top {
@@ -538,60 +542,72 @@ footer {
   font-size: 32px;
   font-weight: bold;
   color: #E6EAEE;
-  width: 100%;  /* Occupe toute la largeur */
+  width: 100%;
+  /* Occupe toute la largeur */
   background-color: #373742;
   padding-left: 20px;
-  text-align:left;
+  text-align: left;
   height: 12%;
 
 }
 
-  
+
 
 
 
 .containers {
   display: flex;
-  width: 100%;  /* Prendre toute la largeur disponible */
-  flex-grow: 1;  /* Permet à cette section de prendre toute la hauteur restante */
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  /* Prendre toute la largeur disponible */
+  flex-grow: 1;
+  /* Permet à cette section de prendre toute la hauteur restante */
 }
+
 .container-right {
-  width: 72%;  /* Conteneur droit occupe 80% de la largeur */
+  width: 72%;
+  height: 140%;
   background-color: #4A4A58;
-  height: 100%;
+  position: relative;
+  height: auto;
+  overflow: visible;
 }
 
 
 
 .container-left {
-width: 25%;
-padding: 10px;
-box-sizing: border-box;
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
 }
-.container-left nav ul li{
-  display: block; 
-    /* margin: 50px 0; */
-    line-height: 20px;
-    margin: 0px;
+
+.container-left nav ul li {
+  display: block;
+  /* margin: 50px 0; */
+  line-height: 20px;
+  margin: 0px;
 }
 
 .container-left nav ul li button {
   /* color: black; */
   font-size: 17px;
-  text-align:left;
+  text-align: left;
   padding: 7px 13px;
   padding-bottom: 15px;
   color: #ffffff98;
-  font-weight:lighter;
+  font-weight: lighter;
   /* display: block; */
 }
+
 .nav-buttonsDevis {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0px; /* Espace entre les lignes */
+  gap: 0px;
+  /* Espace entre les lignes */
   /* align-items: center; */
 }
 
@@ -599,40 +615,45 @@ box-sizing: border-box;
   background-color: transparent;
   width: 90%;
   cursor: pointer;
-display: flex;
-align-items: center;
-text-decoration: none;
-/* padding: 10px; */
-transition: background 0.3s ease, transform 0.3s ease; /* Ajout de transform */
-justify-content: space-between;
-border: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* padding: 10px; */
+  transition: background 0.3s ease, transform 0.3s ease;
+  /* Ajout de transform */
+  justify-content: space-between;
+  border: none;
 
 }
 
 
 .nav-link_devis:hover {
-  color:#E6EAEE;
+  color: #E6EAEE;
   font-weight: bold;
 
 }
 
 .nav-link_devis.active {
-  color:#E6EAEE;
+  color: #E6EAEE;
   font-weight: bold;
 }
+
 .nav-link_devis img {
   transition: transform 0.3s ease;
 }
+
 .nav-link_devis.active img {
   transform: scale(1.15);
 }
 
 .nav-link_devis:hover img {
-  transform: scale(1.15); /* Agrandit l'image à 120% */
+  transform: scale(1.15);
+  /* Agrandit l'image à 120% */
 }
+
 .section-content {
   color: #E6EAEE;
-  font-weight:bold;
+  font-weight: bold;
   text-align: center;
   align-items: center;
   font-size: 20px;
@@ -650,11 +671,152 @@ border: none;
   overflow: hidden;
 }
 
-/* Ces deux divs vont se superposer exactement */
-.detailHaut{
+#detail-m1-1 {
   position: relative;
   width: 100%;
-  height: 10%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#detail-m1-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.texte-centre {
+  margin: 20px auto;
+  max-width: 50%;
+  text-align: left;
+}
+
+.texte-centreWifi {
+  max-width: 90%;
+  text-align: center;
+}
+
+.wifi {
+  width: 50%;
+  height: 60%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #2f2f30;
+  border-radius: 30px;
+  background-color: #373742;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#detailBasWifi {
+  height: 115%;
+}
+
+.input-wifi {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #525353;
+  border-radius: 0;
+  background-color: transparent;
+  color: white; /* ✅ texte en blanc */
+  outline: none;
+}
+
+.input-wifi::placeholder {
+  color: white; /* ✅ placeholder en blanc */
+  opacity: 0.6; /* optionnel pour effet plus doux */
+}
+
+.btn-wrapper {
+  margin-top: auto;
+  /* pousse le bouton en bas */
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.input-wrapper {
+  width: 400px;
+  /* Longueur souhaitée de la ligne du bas */
+  margin: auto;
+  /* Pour centrer si besoin */
+  border-bottom: 2px solid #807d7d;
+  margin-bottom: 20px;
+}
+.input-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #525353;
+  padding: 5px 0;
+  
+}
+.icon-wifi {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.icon-wifi img{
+will-change: 50%;
+height: auto;
+}
+
+.input-wifi {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  
+}
+.text-select {
+  font-size: 16px;
+  font-weight: lighter;
+  color:#07CEC9;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+.btn-connect {
+  padding: 10px 30px;
+  /* largeur contrôlée par padding horizontal */
+  background-color: transparent;
+  color: #07CEC9;
+  border: 2.3px solid #07CEC9;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  /* Pour que le bouton garde sa taille naturelle */
+  margin: 0 auto;
+  /* Centrage si dans un conteneur en display: block */
+}
+
+
+
+.btn-connect:hover {
+  background-color:#07CEC9;
+  color: #E6EAEE;
+}
+
+.icon-eye{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.icon-eye img{
+will-change: 50%;
+height: auto;
+}
+
+/* Ces deux divs vont se superposer exactement */
+.detailHaut {
+  position: relative;
+  width: 100%;
+  height: 5%;
 }
 
 
@@ -663,26 +825,37 @@ border: none;
 .detailHaut {
   z-index: 1;
 }
+
 .detailHaut h2 {
- color: #E6EAEE;
- font-size: 25px;
- font-weight: bolder;
+  color: #E6EAEE;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 .detailBas {
   z-index: 2;
   position: relative;
   width: 100%;
-  height: 80%;
+
 }
+
+.detailBasWifi {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 110%;
+}
+
 .detailBas h3 {
-color: #b8babd;
-font-size: 20px;
-font-weight: bolder;
+  color: #b8bdb8;
+  font-size: 20px;
+  font-weight: bolder;
 }
+
 .icon-module {
   width: 50%;
-  height: auto; /* pour garder les proportions */
+  height: auto;
+  /* pour garder les proportions */
 }
 
 /* Boutons en bas */
@@ -717,10 +890,14 @@ font-weight: bolder;
 
 /* Style spécifique pour "Suivant" */
 .btn-suivant {
-  border: 3px solid #07CEC9;       /* Bordure rouge bien visible */
-  background-color: transparent;   /* Fond transparent */
-  color:#07CEC9;                  /* Texte rouge aussi (ou blanc si tu préfères) */
-  border-radius: 30px;             /* Coins arrondis */
+  border: 3px solid #07CEC9;
+  /* Bordure rouge bien visible */
+  background-color: transparent;
+  /* Fond transparent */
+  color: #07CEC9;
+  /* Texte rouge aussi (ou blanc si tu préfères) */
+  border-radius: 30px;
+  /* Coins arrondis */
   padding: 12px 20px;
   font-weight: 600;
   font-size: 16px;
@@ -729,14 +906,21 @@ font-weight: bolder;
 }
 
 .btn-suivant:hover {
-  background-color: #07CEC9;       /* Au survol : fond rouge */
-  color:#E6EAEE;                    /* Texte devient blanc */
+  background-color: #07CEC9;
+  /* Au survol : fond rouge */
+  color: #E6EAEE;
+  /* Texte devient blanc */
 }
+
 .btn-retour {
-  border: 3px solid #E6EAEE;       /* Bordure rouge bien visible */
-  background-color: transparent;   /* Fond transparent */
-  color:#E6EAEE;                  /* Texte rouge aussi (ou blanc si tu préfères) */
-  border-radius: 30px;             /* Coins arrondis */
+  border: 3px solid #E6EAEE;
+  /* Bordure rouge bien visible */
+  background-color: transparent;
+  /* Fond transparent */
+  color: #E6EAEE;
+  /* Texte rouge aussi (ou blanc si tu préfères) */
+  border-radius: 30px;
+  /* Coins arrondis */
   padding: 12px 20px;
   font-weight: 600;
   font-size: 16px;
@@ -745,8 +929,10 @@ font-weight: bolder;
 }
 
 .btn-retour:hover {
-  background-color: #E6EAEE;       /* Au survol : fond rouge */
-  color:#2A2A32;                    /* Texte devient blanc */
+  background-color: #E6EAEE;
+  /* Au survol : fond rouge */
+  color: #2A2A32;
+  /* Texte devient blanc */
 }
 
 
@@ -757,6 +943,7 @@ font-weight: bolder;
   flex-shrink: 0;
   display: block;
 }
+
 /* Style pour la section Ajout Appareil */
 
 .device-info {
@@ -766,11 +953,13 @@ font-weight: bolder;
 }
 
 .device-item {
-  background-color: transparent;         /* fond transparent */
+  background-color: transparent;
+  /* fond transparent */
   padding: 15px;
   margin-bottom: 10px;
 
-  border-bottom: 2px solid #eee6e660;         /* petite ligne pour démarquer le bas */
+  border-bottom: 2px solid #eee6e660;
+  /* petite ligne pour démarquer le bas */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -790,7 +979,7 @@ font-weight: bolder;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color:#E6EAEE;
+  color: #E6EAEE;
   background-color: transparent;
   border: none;
   font-size: 22px;
@@ -824,7 +1013,8 @@ font-weight: bolder;
   padding: 1em;
   box-sizing: border-box;
 }
-.conteneur-hautScene p{
+
+.conteneur-hautScene p {
   font-family: Calibri;
   font-size: 30px;
   font-weight: bold;
@@ -837,7 +1027,7 @@ font-weight: bolder;
   top: 0;
   left: 0;
   width: 95%;
-  height: 100%; 
+  height: 100%;
   background-color: #4A4A58;
   z-index: 1;
   display: flex;
@@ -845,9 +1035,10 @@ font-weight: bolder;
   justify-content: center;
   box-sizing: border-box;
 }
+
 .conteneur-basScene p {
-color: #b8babd;
-font-size: 20px;
+  color: #b8babd;
+  font-size: 20px;
 }
 
 
@@ -873,7 +1064,8 @@ font-size: 20px;
   padding: 1em;
   box-sizing: border-box;
 }
-.conteneur-hautAcces p{
+
+.conteneur-hautAcces p {
   font-family: Calibri;
   font-size: 30px;
   font-weight: bold;
@@ -886,7 +1078,7 @@ font-size: 20px;
   top: 0;
   left: 0;
   width: 95%;
-  height: 100%; 
+  height: 100%;
   background-color: #4A4A58;
   z-index: 1;
   display: flex;
@@ -894,8 +1086,8 @@ font-size: 20px;
   justify-content: center;
   box-sizing: border-box;
 }
-.conteneur-basAcces p {
-color: #b8babd;
-font-size: 20px;
-}
 
+.conteneur-basAcces p {
+  color: #b8babd;
+  font-size: 20px;
+}

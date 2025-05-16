@@ -212,3 +212,25 @@ function goBack() {
   // Réafficher la liste des modules
   document.getElementById('section-Eclairage').classList.add('active');
 }
+function goBackM1() {
+  // Masquer toutes les sections
+  document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+
+  // Réafficher la liste des modules
+  document.getElementById('detail-m1').classList.add('active');
+}
+
+
+// Fonction pour voir le mot de passe
+function togglePassword() {
+  const passwordInput = document.getElementById("password");
+  const eyeIcon = document.getElementById("eyeIcon");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.src = "Icones/cacher.png"; // Icône œil barré
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.src = "Icones/eye.png"; // Icône œil
+  }
+}
