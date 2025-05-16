@@ -568,6 +568,7 @@ footer {
 
 .container-left {
 <<<<<<< HEAD
+<<<<<<< HEAD
 width: 25%;
 padding: 10px;
 box-sizing: border-box;
@@ -575,6 +576,8 @@ box-sizing: border-box;
 .container-left nav ul li{
   display: block; 
 =======
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
   /* width: 20%; */
   padding: 20px;
   /* border-radius: 10px; */
@@ -588,12 +591,16 @@ box-sizing: border-box;
 }
 .container-left nav ul li{
   display: block; */
+<<<<<<< HEAD
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
+=======
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
     /* margin: 50px 0; */
     line-height: 20px;
     margin: 0px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .container-left nav ul li button {
   /* color: black; */
@@ -604,12 +611,17 @@ box-sizing: border-box;
   color: #ffffff98;
   font-weight:lighter;
 =======
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 .container-left nav ul li a {
   /* color: black; */
   font-size: 13px;
   padding: 7px 13px;
   border-radius: 3px;
   text-decoration: none;
+<<<<<<< HEAD
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
+=======
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
   /* display: block; */
 }
@@ -625,6 +637,7 @@ box-sizing: border-box;
 
 .nav-link_devis {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: transparent;
   width: 90%;
   cursor: pointer;
@@ -636,6 +649,8 @@ transition: background 0.3s ease, transform 0.3s ease; /* Ajout de transform */
 justify-content: space-between;
 border: none;
 =======
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
      display: flex;
 align-items: center;
 text-decoration: none;
@@ -645,6 +660,9 @@ font-weight: bold;
 border-radius: 8px;
 transition: background 0.3s ease;
 justify-content: space-between;
+<<<<<<< HEAD
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
+=======
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 
 }
@@ -798,8 +816,11 @@ font-weight: bolder;
   display: block;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Style pour la section Ajout Appareil */
 =======
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 /* FinStyle pour les contenu Ajout equipement */
 
 
@@ -825,6 +846,9 @@ font-weight: bolder;
   justify-content: space-between;
   align-items: center;
 }
+<<<<<<< HEAD
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
+=======
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 
 .device-info {
@@ -833,6 +857,7 @@ font-weight: bolder;
   width: 100%;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .device-item {
   background-color: transparent;         /* fond transparent */
@@ -847,13 +872,19 @@ font-weight: bolder;
 
 =======
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 .device-menu {
   background: none;
   border: none;
   color: #E6EAEE;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 25px;
   font-weight: bolder;
+=======
+  font-size: 20px;
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 =======
   font-size: 20px;
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
@@ -861,6 +892,7 @@ font-weight: bolder;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .device-button {
   display: flex;
@@ -976,6 +1008,8 @@ font-size: 20px;
 }
 
 =======
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 /* Responsive design */
 @media (max-width: 768px) {
   .containers {
@@ -989,5 +1023,9 @@ font-size: 20px;
   .device-item {
       padding: 10px;
   }
+<<<<<<< HEAD
+}
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
+=======
 }
 >>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
