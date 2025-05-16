@@ -1,0 +1,146 @@
+.block_inside1{
+    display: flex   ;
+        flex-direction: column;
+        align-items: center;
+}section{
+
+}
+.block{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #373742;
+    margin: auto;
+    justify-content: center;
+    align-content: flex-start;
+}.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.text1 p{
+    color: white;
+}
+
+/* button Commencer */
+
+button{
+    background: none;
+    padding: 7px 10px;
+    border-radius: 20px;
+    color: aqua;
+    border: 1px solid aqua;
+    position: absolute; 
+    bottom: 20px;   
+    right: 100px;     
+    padding: 12px 24px;
+    
+}
+button:hover{
+    transition: all 1s;
+        background-color: aqua;
+        color: black;
+}
+
+/* 
+ end
+*/
+
+/* 
+    button offline onligne
+*/
+.block_inside2{
+    display: none;
+}
+.button-wrapper {
+    position: relative;
+    margin: 20px;
+  }
+
+
+  .mode-button.online {
+    border-color: #00d1d1;
+  }
+
+  .button-text {
+    position: relative;
+    /* top: 10px; */
+    /* left: 20px; */
+    color: white;
+    font-size: 16px;
+  }
+
+  .online .button-text {
+    color: #00d1d1;
+  }
+
+  .dropdown-arrow {
+    position: absolute;
+    top: 0px;
+    right: -48px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transform: rotate(153deg);
+  }
+
+  .online .dropdown-arrow {
+    color: #00d1d1;
+  }
+  .button-wrapper {
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .mode-button {
+    width: 239px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+    position: relative;
+  }
+
+  .mode-button.online {
+    border-color: #00d1d1;
+    color: #00d1d1;
+  }
+
+
+
+  .mode-button.online + .dropdown-arrow {
+    color: #00d1d1;
+  }
+
+  .info-box {
+    position: relative;
+    z-index: 9999;
+    left: 220px;
+    top: 0;
+    /* width: 50%; */
+    background-color: #3d3d50;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+    display: none;
+  }
+ 
+  .active {
+    display: block;
+
+    /* position: absolute; */
+    left: 270px;
+  }
+
+  /* 
+  
+  */

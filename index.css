@@ -59,6 +59,7 @@ header {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* border-left: 1px solid black; */
 
   }
 }
@@ -72,6 +73,7 @@ header {
     width: 100%;
     /* flex-wrap: wrap; */
     justify-content: space-between;
+    border-left: 1px solid black;
   }
 
 }
@@ -127,6 +129,7 @@ ul {
 
 .content-section {
   background-color: #373742;
+  border-left: 1px solid black; 
 
 }
 
@@ -398,7 +401,7 @@ footer {
   #check:checked~.section_droite {}
 
   .section_Gauche {
-    background: #470088;
+    background: #373742;
     /* height: 80px; */
     /* width: 50%; */
     transition: all 0.4s;
@@ -564,17 +567,34 @@ footer {
 
 
 .container-left {
+<<<<<<< HEAD
 width: 25%;
 padding: 10px;
 box-sizing: border-box;
 }
 .container-left nav ul li{
   display: block; 
+=======
+  /* width: 20%; */
+  padding: 20px;
+  /* border-radius: 10px; */
+  /* height: 60%; */
+  box-sizing: border-box;
+  /* overflow-y: auto; */
+  /* border-left: 1px inset rgb(194 194 194); */
+  /* overflow: auto; */
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
+}
+.container-left nav ul li{
+  display: block; */
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
     /* margin: 50px 0; */
     line-height: 20px;
     margin: 0px;
 }
 
+<<<<<<< HEAD
 .container-left nav ul li button {
   /* color: black; */
   font-size: 17px;
@@ -583,6 +603,14 @@ box-sizing: border-box;
   padding-bottom: 15px;
   color: #ffffff98;
   font-weight:lighter;
+=======
+.container-left nav ul li a {
+  /* color: black; */
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
   /* display: block; */
 }
 .nav-buttonsDevis {
@@ -596,6 +624,7 @@ box-sizing: border-box;
 }
 
 .nav-link_devis {
+<<<<<<< HEAD
   background-color: transparent;
   width: 90%;
   cursor: pointer;
@@ -606,6 +635,17 @@ text-decoration: none;
 transition: background 0.3s ease, transform 0.3s ease; /* Ajout de transform */
 justify-content: space-between;
 border: none;
+=======
+     display: flex;
+align-items: center;
+text-decoration: none;
+color: #fff;
+font-weight: bold;
+/* padding: 10px; */
+border-radius: 8px;
+transition: background 0.3s ease;
+justify-content: space-between;
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 
 }
 
@@ -757,7 +797,35 @@ font-weight: bolder;
   flex-shrink: 0;
   display: block;
 }
+<<<<<<< HEAD
 /* Style pour la section Ajout Appareil */
+=======
+/* FinStyle pour les contenu Ajout equipement */
+
+
+/* Style pour la section Ajout Appareil */
+.device-category {
+  padding: 20px;
+  color: #E6EAEE;
+}
+
+.device-category h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #5a5a6e;
+  padding-bottom: 10px;
+}
+
+.device-item {
+  background-color: #373742;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 
 .device-info {
   display: flex;
@@ -765,6 +833,7 @@ font-weight: bolder;
   width: 100%;
 }
 
+<<<<<<< HEAD
 .device-item {
   background-color: transparent;         /* fond transparent */
   padding: 15px;
@@ -776,16 +845,23 @@ font-weight: bolder;
   align-items: center;
 }
 
+=======
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
 .device-menu {
   background: none;
   border: none;
   color: #E6EAEE;
+<<<<<<< HEAD
   font-size: 25px;
   font-weight: bolder;
+=======
+  font-size: 20px;
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
   cursor: pointer;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
 .device-button {
   display: flex;
   align-items: center;
@@ -899,3 +975,19 @@ color: #b8babd;
 font-size: 20px;
 }
 
+=======
+/* Responsive design */
+@media (max-width: 768px) {
+  .containers {
+      flex-direction: column;
+  }
+  
+  .container-left, .container-right {
+      width: 100%;
+  }
+  
+  .device-item {
+      padding: 10px;
+  }
+}
+>>>>>>> 499d3f9417034e20b6658b937a4266cbfff48f52
