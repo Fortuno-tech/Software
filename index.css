@@ -1,6 +1,7 @@
 html,
 body {
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: 'Calibri', sans-serif;
   height: 100%;
   margin: 0;
@@ -27,12 +28,22 @@ header {
 header {
   background-color: rgb(55, 55, 66);
 >>>>>>> 78ac7f6 (changement des fons en css)
+=======
+  width: 100%;
+  margin: auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  background-color: rgb(55, 55, 66);
+>>>>>>> refs/remotes/origin/na_rindra
   max-width: 100%;
   padding: 20px 2px;
   margin: auto;
 }
 
 .myHome {
+<<<<<<< HEAD
 <<<<<<< HEAD
   background-color: transparent;
   height: 170px;
@@ -46,12 +57,17 @@ header {
   min-height: 100vh;
   background-color: #373742;
 =======
+=======
+>>>>>>> refs/remotes/origin/na_rindra
   background-color: rgb(55, 55, 66);
   height: 150px;
 }
 .block_Entier{
 background-color: rgb(55, 55, 66);
+<<<<<<< HEAD
 >>>>>>> 78ac7f6 (changement des fons en css)
+=======
+>>>>>>> refs/remotes/origin/na_rindra
   padding: 6px 4px;
   box-sizing: border-box;
 }
@@ -156,7 +172,10 @@ ul {
 =======
   width: 200px;
   background-color: rgb(55, 55, 66);
+<<<<<<< HEAD
 >>>>>>> 78ac7f6 (changement des fons en css)
+=======
+>>>>>>> refs/remotes/origin/na_rindra
 }
 
 
@@ -171,7 +190,10 @@ ul {
 =======
 .section_Container {
   background-color: rgb(55, 55, 66);
+<<<<<<< HEAD
 >>>>>>> 78ac7f6 (changement des fons en css)
+=======
+>>>>>>> refs/remotes/origin/na_rindra
 
 }
 
@@ -212,8 +234,11 @@ ul {
 .F4 {
   height: 150px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #4A4A58;
 =======
+=======
+>>>>>>> refs/remotes/origin/na_rindra
   background-color: rgb(74, 74, 88);
   /* border: 2px solid white; */
   border: 2px solid #000000;
@@ -235,6 +260,7 @@ ul {
  /* .Meteo {
   height: 216px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #4A4A58;
   border-style: solid;
   border-color: green;
@@ -251,6 +277,9 @@ ul {
 =======
   background-color: rgb(74, 74, 88);
 >>>>>>> 78ac7f6 (changement des fons en css)
+=======
+  background-color: rgb(74, 74, 88);
+>>>>>>> refs/remotes/origin/na_rindra
 }
 
 
@@ -342,11 +371,12 @@ ul {
 
 .flex_bedroom {
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-start;
   /* flex-wrap: wrap; */
 }
 
 footer {
+<<<<<<< HEAD
 <<<<<<< HEAD
   background-color: #373742;
   border-style: solid;
@@ -354,6 +384,9 @@ footer {
 =======
   background-color: rgb(55, 55, 66);
 >>>>>>> 78ac7f6 (changement des fons en css)
+=======
+  background-color: rgb(55, 55, 66);
+>>>>>>> refs/remotes/origin/na_rindra
   height: 100px;
   width: 100%;
 }
