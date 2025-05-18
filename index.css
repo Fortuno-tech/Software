@@ -423,9 +423,6 @@ footer {
     background: none;
     color: #0082e6;
   }
-
-  #check:checked~.section_droite {}
-
   .section_Gauche {
     background: #470088;
     /* height: 80px; */
