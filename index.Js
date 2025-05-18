@@ -53,3 +53,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
   });
+
+  //changement d'image aléatoire
+  const image = [
+    "Images/Décoration moderne et épurée dans véranda.jfif",
+    "Images/Master Bedrooms Decor Modern Storage.jfif",
+    "Images/téléchargement.jfif",
+];
+//fonction pour l'image aleatoire
+function avoir_image_alea(current_image){
+    let nouveau_image;
+     do {
+            const random_image = Math.floor(Math.random() * image.length);
+            nouveau_image = image[random_image];
+        } while (nouveau_image === current_image && image.length > 1);
+            return nouveau_image;
+    }
+    
+ // Afficher une image aléatoire au chargement de la page 
+window.onload = function() {
+    const imageElement = document.getElementById('randomImage');
+    imageElement.src = avoir_image_alea("");
+    }
