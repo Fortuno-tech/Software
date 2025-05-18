@@ -155,14 +155,79 @@
       </section>
       <!-- Section Appareil -->
       <section id="section_Appareil" class="content-section" style="display: none;">
-        <h1>Mes Appareils</h1>
-        <p>Contenu des appareils</p>
+        <p>Mes Appareils</p>
+  
       </section>
 
       <!-- Section Chambre -->
       <section id="section_Chambre" class="content-section" style="display: none;">
-        <h1>Chambres</h1>
-        <p>Contenu des chambres</p>
+        <div class="container-top">
+          <p>Chambres</p>
+        </div>
+        <!-- <p>Contenu des chambres</p> -->
+      
+        <div class="container-chambre">
+          <div class="container-left">
+            <nav>
+              <ul class="nav-buttonsDevis">
+                <li>
+                  <button class="nav-link_devis active" data-target="section-Eclairage">
+                    Chambre a coucher
+                    <img src="Icones/icons8-chambre-intérieur-100 (1).png" alt="chambre" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Prise">
+                    Chambre bebe
+                    <img src="Icones/icons8-crib-100 (1).png" alt="chambre-bebe" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Climatiseur">
+                    Sejour
+                    <img src="Icones/icons8-sofa-100 (1).png" alt="Climatiseur" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Sonnette">
+                    Salle de bain
+                    <img src="Icones/icons8-baignoire-100 (1).png" alt="Sonnette" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Station">
+                    Veranda
+                    <img src="Icones/homeLow.png" alt="Station météo" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Gaz">
+                    Garage
+                    <img src="Icones/chambreLow.png" alt="Détecteur de gaz" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Presence">
+                    Cuisine
+                    <img src="Icones/icons8-noodles-100 (1).png" alt="Détecteur de présence" class="icon-leftDevis">
+                  </button>
+                </li>
+                <li>
+                  <button class="nav-link_devis" data-target="section_Temperature">
+                    Plus
+                    <img src="Icones/ajoutLow.png" alt="ajoutLow" class="icon-leftDevis">
+                  </button>
+                </li>
+      
+              </ul>
+            </nav>
+          </div>
+          <div class="container-right">
+            <!-- Section liste des modules -->
+
+            
+          </div>
+
       </section>
 
       <!-- Ajout Appareil -->
@@ -230,8 +295,8 @@
                 </li>
               </ul>
             </nav>
-
           </div>
+          
           <!--
          Nouveau contenu pour la partie droite 
              -->
@@ -323,10 +388,10 @@
               <div class="detailBasWifi">
                 <div class="wifi">
                   <h3 class="texte-centreWifi">
-                    Sélectionnez le point d’accès Wi-Fi et 
+                    Sélectionnez le point d’accès Wi-Fi et
                     saisissez le mot de passe.
                   </h3>
-              
+
                   <div class="input-wrapper">
                     <div class="input-label">
                       <img src="Icones/wifi-off.png" alt="Wi-Fi" class="icon-wifi" />
@@ -334,31 +399,31 @@
                       <span class="text-select">Sélectionner le Wi-Fi</span>
                     </div>
                   </div>
-                  
-              
+
+
                   <div class="input-wrapper">
                     <div class="input-label">
                       <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
-                      
+
                       <input type="password" id="password" placeholder="Mot de passe" class="input-wifi" />
-                      
-                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword()" id="eyeIcon" />
+
+                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword()"
+                        id="eyeIcon" />
                     </div>
                   </div>
-                  
-              
+
+
                   <div class="btn-wrapper">
                     <button class="btn-connect">Connecter</button>
                   </div>
-                  <div class="retour">
-                    <button class="btn-retour" onclick="goBackM1()">⬅ Retour</button>
-                    <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
-                  </div>
                 </div>
-              
-               
+
+                <div class="retour">
+                  <button class="btn-retour" onclick="goBackM1()">⬅ Retour</button>
+                  <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
+                </div>
               </div>
-              
+
             </div>
 
 
@@ -394,7 +459,6 @@
         </div>
     </div>
     </section>
-
 
     <!-- Section Appareil -->
     <section id="section_scene" class="content-section" style="display: none;">
