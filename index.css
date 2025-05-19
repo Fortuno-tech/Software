@@ -177,6 +177,10 @@ ul {
   width: 100%;
 
 }
+#randomImage {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
 
 .Big_image_Home img {
   width: 100%;

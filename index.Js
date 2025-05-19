@@ -234,3 +234,60 @@ if (passwordInput.type === "password") {
   eyeIcon.src = "Icones/eye.png"; // Icône œil
 }
 }
+
+
+
+
+  const image = [
+    "/Images/fortico.png",
+    "/Images/home.jpg",
+    "/Images/pub.jpg",
+  ];
+
+  function avoir_image_alea(current_image) {
+    let nouveau_image;
+    do {
+      const random_index = Math.floor(Math.random() * image.length);
+      nouveau_image = image[random_index];
+    } while (nouveau_image === current_image && image.length > 1);
+    return nouveau_image;
+  }
+
+  function mettre_a_jour_image() {
+    const imageElement = document.getElementById('randomImage');
+    const current = imageElement.src.split('/').pop();
+    
+    // Créer un nouvel élément image temporaire
+    const nouvelleImage = new Image();
+    nouvelleImage.src = avoir_image_alea(current); // Sélectionne la nouvelle image
+    
+    // Quand la nouvelle image est complètement chargée
+    nouvelleImage.onload = () => {
+      // Commence par fondre l'image actuelle
+      imageElement.style.opacity = 0;
+  
+      setTimeout(() => {
+        // Change la source de l'image affichée
+        imageElement.src = nouvelleImage.src;
+  
+        // Une fois l'image visible, la faire réapparaître
+        imageElement.style.opacity = 1;
+      }, 300); // petit délai pour le fondu
+    };
+  }
+  
+  
+
+  // Au chargement de la page
+  window.onload = mettre_a_jour_image;
+
+  // À chaque fois qu'on clique sur "Accueil"
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-target');
+      if (targetId === 'content-section') {
+        mettre_a_jour_image(); // Changer l'image
+      }
+    });
+  });
+
