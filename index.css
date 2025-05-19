@@ -1,10 +1,17 @@
-html,
-body {
-  font-family: 'Calibri', sans-serif;
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden; /* évite que le body lui-même scrolle */
+}
+
+.block_Entier {
+  height: 100vh;
+  background-color: #423f37;
+  padding: 6px 4px;
   box-sizing: border-box;
+
+  overflow-y: auto; /* permet de scroller verticalement */
 }
 
 h1 {
@@ -31,13 +38,7 @@ header {
   border-color: #595968;
 }
 
-.block_Entier {
-  height: 100%;
-  min-height: 100vh;
-  background-color: #373742;
-  padding: 6px 4px;
-  box-sizing: border-box;
-}
+
 
 @media (max-width: 1265px) {
   .fonctionalite {
@@ -195,18 +196,49 @@ ul {
   /* flex-wrap: wrap; */
 }
 
-.F1,
-.F2,
-.F3,
-.F4 {
+.F1 {
   height: 150px;
-  background-color: #4A4A58;
+  background-color: #2A2A32;
   width: 150px;
   border-radius: 20px;
   margin-left: 7px;
   margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
+  /* transition douce */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* change le curseur */
 }
+
+.F1:hover {
+  transform: scale(1.05); /* effet zoom */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.F1:active {
+  transform: scale(0.97); /* effet enfoncé */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.F1 img {
+  flex-grow: 1;
+  object-fit: contain;
+  max-height: 90px;
+}
+
+.F1 h2 {
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: bold;
+  color: #E6EAEE;
+  margin: 0;
+  padding-top: 10px;
+}
+
 
 .container {
   display: flex;
@@ -301,13 +333,46 @@ ul {
 
 .bedroom {
 
-  background-color: #4A4A58;
+  background-color: #2A2A32;
   height: 190px;
   width: 203px;
   margin: 4px 4px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    /* transition douce */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer; /* change le curseur */
 }
 
+
+.bedroom:hover {
+  transform: scale(1.05); /* effet zoom */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bedroom:active {
+  transform: scale(0.97); /* effet enfoncé */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bedroom img {
+  flex-grow: 1;
+  object-fit: contain;
+  max-height: 90px;
+}
+
+.bedroom h2 {
+  font-family: Calibri;
+  font-size: 20px;
+  font-weight: bold;
+  color: #E6EAEE;
+  margin: 0;
+  padding-top: 10px;
+}
 .content-section {
   display: flex;
   padding: 6px 7px;
@@ -318,10 +383,6 @@ ul {
   justify-content: space-between;
 }
 
-.flex_bedroom {
-  display: flex;
-  justify-content: flex-start;
-}
 
 footer {
   background-color: #373742;
@@ -345,33 +406,13 @@ footer {
 
 @media (max-width: 970px) {
 
-  /* .checkbtn {
-    display: block;
-  }
-
-  label.logo {
-    font-size: 22px;
-  }
-.section_Gauche{
-  float: right;
-  
-}
-   .section_Gauche {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-    
-  } */
   .checkbtn {
     display: block;
   }
 
   .section_Gauche {
     align-items: center;
+    overflow-y: auto;
     position: fixed;
     width: 250px;
     height: 100vh;
@@ -381,6 +422,11 @@ footer {
     z-index: 100;
     transition: all 0.4s;
     padding-top: 80px;
+  }
+  .section_Gauche {
+    background: #470088;
+
+    transition: all 0.4s;
   }
 
   .section_Gauche.active {
@@ -427,12 +473,7 @@ footer {
     background: none;
     color: #0082e6;
   }
-  .section_Gauche {
-    background: #470088;
-    /* height: 80px; */
-    /* width: 50%; */
-    transition: all 0.4s;
-  }
+
 
 
 }
@@ -444,15 +485,16 @@ footer {
 /* Création style pour Bouton Navigation */
 
 .nav-buttons {
+  max-height: 100vh;        /* ou une hauteur spécifique ex: 80vh */
+  overflow-y: auto;         /* active le scroll vertical */
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  /* espace vertical entre chaque bouton */
   list-style: none;
-
 }
+
 
 .nav-buttons li {
   margin: 10px 0;
@@ -729,7 +771,7 @@ footer {
 .wifi {
   width: 50%;
   height: 60%;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 20px;
   border: 2px solid #2f2f30;
   border-radius: 30px;
@@ -803,6 +845,7 @@ height: auto;
   outline: none;
   
 }
+
 .text-select {
   font-size: 16px;
   font-weight: lighter;
@@ -842,19 +885,37 @@ will-change: 50%;
 height: auto;
 }
 
-/* Ces deux divs vont se superposer exactement */
 .detailHaut {
   position: relative;
   width: 100%;
-  height: 5%;
-}
-
-
-
-/* Optionnel : ajouter un fond pour visualiser */
-.detailHaut {
+  height: 15%;              /* garde ta hauteur si c’est voulu */
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* pour le centrage horizontal général */
 }
+
+/* Centrage absolu du h2 */
+.detailHaut h2 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-family: Calibri;
+  color: white;
+}
+
+/* Placement à droite du h3 */
+.detailHaut h3 {
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  font-size: 14px;
+  font-family: Calibri;
+  color: #E6EAEE;
+}
+
 
 .detailHaut h2 {
   color: #E6EAEE;
@@ -862,11 +923,36 @@ height: auto;
   font-weight: bolder;
 }
 
-.detailBas {
-  z-index: 2;
+.detailHaut-conf {
   position: relative;
   width: 100%;
+  height: 80px; /* Hauteur fixée pour garantir l'affichage correct */
+  z-index: 1;
+}
 
+/* h2 centré horizontalement ET verticalement */
+.detailHaut-conf h2 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-family: Calibri;
+  font-weight: bolder;
+  color: #E6EAEE;
+}
+
+/* h3 aligné à droite, centré verticalement */
+.detailHaut-conf h3 {
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-family: Calibri;
+  color: #E6EAEE;
 }
 
 .detailBasWifi {
@@ -887,6 +973,11 @@ height: auto;
   height: auto;
   /* pour garder les proportions */
 }
+.icon-module-router{
+  width: 30%;
+  height: auto;
+  /* pour garder les proportions */
+}
 
 /* Boutons en bas */
 .retour {
@@ -903,6 +994,36 @@ height: auto;
 }
 
 .retour button {
+  flex: 1;
+  max-width: 160px;
+  margin: 0 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Boutons en bas */
+.retour-wifi {
+  position: absolute;
+  bottom: 145px;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.retour-wifi button {
   flex: 1;
   max-width: 160px;
   margin: 0 10px;

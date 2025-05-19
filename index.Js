@@ -219,7 +219,20 @@ document.querySelectorAll('.section-content').forEach(el => el.classList.remove(
 // Réafficher la liste des modules
 document.getElementById('detail-m1').classList.add('active');
 }
-
+function goBackM11() {
+  // Masquer toutes les sections
+  document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+  
+  // Réafficher la liste des modules
+  document.getElementById('detail-m1-2').classList.add('active');
+  }
+function goBackM2() {
+  // Masquer toutes les sections
+  document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+  
+  // Réafficher la liste des modules
+  document.getElementById('detail-m1-1').classList.add('active');
+  }
 
 // Fonction pour voir le mot de passe
 function togglePassword() {

@@ -106,14 +106,15 @@
              ajout de img id="randomImage" src=""... 
               -->
             <img id="randomImage" src="" alt="txt" width="" width="300">
-          
 
-        </div>
+
+          </div>
           <div class="fonctionalite">
-            <div class="F1"></div>
-            <div class="F2"></div>
-            <div class="F3"></div>
-            <div class="F4"></div>
+            <div class="F1">
+              <img src="/Icones/ajoutLow.png">
+              <h2>Ajout équipement</h2>
+            </div>
+
           </div>
         </div>
 
@@ -148,21 +149,17 @@
           </div>
           <!-- 
                      Fin de la classe Meteo -->
-          <div class="flex_bedroom">
-            <div class="bedroom">
-              <img src="Images/Master Bedrooms Decor Modern Storage.jpeg" alt="bedroom moderne et épurée" height="190px"
-                width="203px" style="border-radius: 15px;" />
-            </div>
-            <div class="bedroom">
-              <img src="Images/Décoration moderne et épurée dans véranda.jpeg" alt="bedroom modern" height="190px"
-                width="203px" style="border-radius: 15px;" />
-            </div>
+
+          <div class="bedroom">
+            <img src="/Icones/ajoutLow.png">
+            <h2>Ajout Caméra</h2>
           </div>
+
       </section>
       <!-- Section Appareil -->
       <section id="section_Appareil" class="content-section" style="display: none;">
         <p>Mes Appareils</p>
-  
+
       </section>
 
       <!-- Section Chambre -->
@@ -171,7 +168,7 @@
           <p>Chambres</p>
         </div>
         <!-- <p>Contenu des chambres</p> -->
-      
+
         <div class="container-chambre">
           <div class="container-left">
             <nav>
@@ -224,14 +221,14 @@
                     <img src="Icones/ajoutLow.png" alt="ajoutLow" class="icon-leftDevis">
                   </button>
                 </li>
-      
+
               </ul>
             </nav>
           </div>
           <div class="container-right">
             <!-- Section liste des modules -->
 
-            
+
           </div>
 
       </section>
@@ -302,7 +299,7 @@
               </ul>
             </nav>
           </div>
-          
+
           <!--
          Nouveau contenu pour la partie droite 
              -->
@@ -420,22 +417,39 @@
 
 
                   <div class="btn-wrapper">
-                    <button class="btn-connect">Connecter</button>
+                    <button class="btn-connect" data-target="detail-m1-3" onclick="showDetail(this)">Connecter</button>
                   </div>
                 </div>
 
-                <div class="retour">
-                  <button class="btn-retour" onclick="goBackM1()">⬅ Retour</button>
-                  <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
+                <div class="retour-wifi">
+                  <button class="btn-retour" onclick="goBackM2()">⬅ Retour</button>
                 </div>
+
+              </div>
+            </div>
+            <div id="detail-m1-3" class="section-content">
+              <div class="detailHaut-conf">
+                <h2>
+                  Configuration module
+                </h2>
+                <h3>
+                  Connecter au module SmartSwitch-XXXX
+
+                </h3>
+              </div>
+              <div class="detailBas">
+                <img src="Icones/router.png" class="icon-module-router">
+                <h3 class="texte-centre">
+                  Entrer les paramètre du routeur afin que le
+                  module puisse y connecter.
+                </h3>
               </div>
 
+              <div class="retour">
+                <button class="btn-retour" onclick="goBackM11()">⬅ Retour</button>
+                <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
+              </div>
             </div>
-
-
-
-
-
 
             <div id="detail-m2" class="section-content">
               <h2>Smart switch V1 M2</h2>
@@ -450,9 +464,6 @@
               <p>Status : En ligne</p>
               <button onclick="goBack()">⬅ Retour</button>
             </div>
-
-
-
             <div id="section_Prise" class="section-content">Contenu Prise connectée</div>
             <div id="section_Climatiseur" class="section-content">Contenu Climatiseur</div>
             <div id="section_Sonnette" class="section-content">Contenu Sonnette</div>
@@ -463,37 +474,36 @@
             <div id="section_Porte" class="section-content">Contenu Détecteur de porte</div>
           </div>
         </div>
+      </section>
+
+      <!-- Section Appareil -->
+      <section id="section_scene" class="content-section" style="display: none;">
+        <div class="conteneur-hautScene">
+          <p>Scène</p>
+        </div>
+        <div class="conteneur-basScene">
+          <p>Cette page n’est pas encore disponible</p>
+        </div>
+      </section>
+
+      <!-- Section Appareil -->
+      <section id="section_acces" class="content-section" style="display: none;">
+        <div class="conteneur-hautAcces">
+          <p>Acces</p>
+        </div>
+        <div class="conteneur-basAcces">
+          <p>Cette page n’est pas encore disponible</p>
+        </div>
+      </section>
+      <!-- Section Appareil -->
+      <section id="section_parametre" class="content-section" style="display: none;">
+        <h1>parametre</h1>
+        <p>Contenu des parametre</p>
+      </section>
     </div>
-    </section>
+    <footer>
 
-    <!-- Section Appareil -->
-    <section id="section_scene" class="content-section" style="display: none;">
-      <div class="conteneur-hautScene">
-        <p>Scène</p>
-      </div>
-      <div class="conteneur-basScene">
-        <p>Cette page n’est pas encore disponible</p>
-      </div>
-    </section>
-
-    <!-- Section Appareil -->
-    <section id="section_acces" class="content-section" style="display: none;">
-      <div class="conteneur-hautAcces">
-        <p>Acces</p>
-      </div>
-      <div class="conteneur-basAcces">
-        <p>Cette page n’est pas encore disponible</p>
-      </div>
-    </section>
-    <!-- Section Appareil -->
-    <section id="section_parametre" class="content-section" style="display: none;">
-      <h1>parametre</h1>
-      <p>Contenu des parametre</p>
-    </section>
-  </div>
-  <footer>
-
-  </footer>
+    </footer>
   </div>
   <script src="./index.Js"></script>
 </body>
