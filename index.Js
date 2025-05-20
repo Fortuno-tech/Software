@@ -226,6 +226,20 @@ function goBackM11() {
   // Réafficher la liste des modules
   document.getElementById('detail-m1-2').classList.add('active');
   }
+  function goBackM13() {
+    // Masquer toutes les sections
+    document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+    
+    // Réafficher la liste des modules
+    document.getElementById('detail-m1-3').classList.add('active');
+    }
+  function goBackM14() {
+    // Masquer toutes les sections
+    document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+    
+    // Réafficher la liste des modules
+    document.getElementById('detail-m1-4').classList.add('active');
+    }
 function goBackM2() {
   // Masquer toutes les sections
   document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
@@ -235,18 +249,21 @@ function goBackM2() {
   }
 
 // Fonction pour voir le mot de passe
-function togglePassword() {
-const passwordInput = document.getElementById("password");
-const eyeIcon = document.getElementById("eyeIcon");
+function togglePassword(eyeIcon) {
+  const targetId = eyeIcon.getAttribute("data-target");
+  const passwordInput = document.getElementById(targetId);
 
-if (passwordInput.type === "password") {
-  passwordInput.type = "text";
-  eyeIcon.src = "Icones/cacher.png"; // Icône œil barré
-} else {
-  passwordInput.type = "password";
-  eyeIcon.src = "Icones/eye.png"; // Icône œil
+  if (!passwordInput) return;
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.src = "Icones/cacher.png";
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.src = "Icones/eye.png";
+  }
 }
-}
+
 
 
 

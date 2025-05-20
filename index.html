@@ -11,22 +11,12 @@
 <body id="body">
   <div class="block_Entier">
     <header>
-      <div>
-        <div style="display: flex;justify-content: space-between;">
-          <div>
-            <input type="checkbox" id="check" onclick="toggleMenu()">
-            <span>Fortico Smart Home</span>
-          </div>
-          <div id="menu">
-            <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
-              <i class="fas fa-bars">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </i>
-            </label>
-          </div>
-        </div>
+      <div class="container-head">
+        <h1>
+          <span class="head1">Fortico</span>
+          <span class="head2">Smart</span>
+          <span class="head3">Home</span>
+        </h1>
       </div>
     </header>
     <!-- GAUCHE 
@@ -155,6 +145,7 @@
             <h2>Ajout Caméra</h2>
           </div>
 
+
       </section>
       <!-- Section Appareil -->
       <section id="section_Appareil" class="content-section" style="display: none;">
@@ -225,11 +216,7 @@
               </ul>
             </nav>
           </div>
-          <div class="container-right">
-            <!-- Section liste des modules -->
 
-
-          </div>
 
       </section>
 
@@ -408,21 +395,18 @@
                     <div class="input-label">
                       <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
 
-                      <input type="password" id="password" placeholder="Mot de passe" class="input-wifi" />
+                      <input type="password" id="password1" placeholder="Mot de passe" class="input-wifi" />
 
-                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword()"
-                        id="eyeIcon" />
+                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)"
+                        data-target="password1" />
                     </div>
                   </div>
 
 
                   <div class="btn-wrapper">
+                    <button class="btn-retour-data" onclick="goBackM2()">⬅</button>
                     <button class="btn-connect" data-target="detail-m1-3" onclick="showDetail(this)">Connecter</button>
                   </div>
-                </div>
-
-                <div class="retour-wifi">
-                  <button class="btn-retour" onclick="goBackM2()">⬅ Retour</button>
                 </div>
 
               </div>
@@ -447,9 +431,119 @@
 
               <div class="retour">
                 <button class="btn-retour" onclick="goBackM11()">⬅ Retour</button>
-                <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
+                <button class="btn-suivant" data-target="detail-m1-4" onclick="showDetail(this)">Suivant ➡</button>
               </div>
             </div>
+
+
+            <div id="detail-m1-4" class="section-content">
+
+              <div class="detailBasWifi">
+                <div class="wifi">
+                  <h3 class="texte-centreWifi">
+                    Sélectionnez le réseau Wi-Fi 2,4 GHz et
+                    saisissez le mot de passe.
+
+                  </h3>
+                  <h3 class="centreWifi">
+                    Si votre Wi-Fi est 5 GHz, veuillez le réglez sur 2,4GHz
+
+                  </h3>
+                  <div class="type-wifi">
+                    <p>
+                      <span class="error">×</span> Wi-Fi – 50GHz
+                      <img src="Icones/icons8-case-à-cocher-non-cochée-100.png" alt="Wi-Fi Off" class="icon">
+                    </p>
+                    <p>
+                      <span class="valid">√</span> Wi-Fi – 2.4GHz
+                      <img src="Icones/icons8-wifi-100 (1).png" alt="Wi-Fi On" class="icon">
+                    </p>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <div class="input-label">
+                      <img src="Icones/wifi-off.png" alt="Wi-Fi" class="icon-wifi" />
+                      <input type="text" placeholder="Nom du point d'accès" class="input-wifi" />
+                      <span class="text-select">Sélectionner le Wi-Fi</span>
+                    </div>
+                  </div>
+
+
+                  <div class="input-wrapper">
+                    <div class="input-label">
+                      <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
+
+                      <input type="password" id="password2" placeholder="Confirmez le mot de passe"
+                        class="input-wifi" />
+
+                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)"
+                        data-target="password2" />
+                    </div>
+                  </div>
+
+
+                  <div class="btn-wrapper">
+                    <button class="btn-retour-data" onclick="goBackM13()">⬅</button>
+                    <button class="btn-connect" data-target="detail-m1-5" onclick="showDetail(this)">Connecter</button>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+
+            <div id="detail-m1-5" class="section-content">
+              <div class="detailHaut-conf">
+                <h2>
+                  Module connecter avec succès
+                </h2>
+                <h3>
+                  Connecter au module SmartSwitch-XXXX
+
+                </h3>
+              </div>
+              <div class="detailBas">
+                <img src="Icones/module.png" class="icon-module">
+                <h3 class="texte-centre">
+                  Module connecter avec succès
+                </h3>
+              </div>
+
+              <div class="retour">
+                <button class="btn-retour" onclick="goBackM14()">⬅ Retour</button>
+                <button class="btn-suivant" data-target="detail-m1-6" onclick="showDetail(this)">Suivant ➡</button>
+              </div>
+            </div>
+
+            <div id="detail-m1-6" class="section-content">
+              <div class="container-pair">
+                <div class="box-rounded1">
+                  <div class="top-section">
+                    <img src="/Icones/icons8-lumière-100.png" class="icon-light" />
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="bottom-section">
+                    <div class="texts">
+                      <p class="p1">Light</p>
+                      <p class="p2">SmartSwitch-xxxx </p>
+                    </div>
+                    <button class="more-btn">...</button>
+                  </div>
+                </div>
+
+                <div class="box-rounded2">
+                  <img src="/Icones/ajoutLow.png">
+                  <h2>Ajout équipement</h2>
+                </div>
+              </div>
+            </div>
+
+
 
             <div id="detail-m2" class="section-content">
               <h2>Smart switch V1 M2</h2>
