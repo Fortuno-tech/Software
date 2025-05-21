@@ -19,6 +19,27 @@
 // }
 // document.getElementById("menu").addEventListener("click", () => {});
 
+const upload = document.getElementById('upload');
+    const profilePic = document.getElementById('profile-pic');
+    // Charger l'image du localStorage si elle existe
+    const savedImage = localStorage.getItem('profileImage');
+    if (savedImage) {
+      profilePic.src = savedImage;
+    }
+
+    // Quand une image est importée
+    upload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const imageData = e.target.result;
+          profilePic.src = imageData;
+          localStorage.setItem('profileImage', imageData); // Enregistrer dans le navigateur
+        }
+        reader.readAsDataURL(file);
+      }
+    });
 
 document.addEventListener('DOMContentLoaded', function() {
   const check = document.getElementById("check");
