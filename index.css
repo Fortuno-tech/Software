@@ -834,6 +834,35 @@ footer {
   max-width: 50%;
   text-align: left;
 }
+.loader-wifi {
+  border: 4px solid #E6EAEE;
+  border-top: 4px solid #07CEC9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto 0 auto; /* centre horizontalement */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loader-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 .texte-centreWifi {
   margin-bottom: 20px;
@@ -947,16 +976,21 @@ footer {
   border-bottom: 2px solid #525353;
   border-radius: 0;
   background-color: transparent;
-  color: #8996a9;
-  /* ✅ texte en blanc */
   outline: none;
+  color: white;  /* couleur du texte saisi */
+
+  
 }
 
 .input-wifi::placeholder {
   color: white;
-  /* ✅ placeholder en blanc */
   opacity: 0.6;
-  /* optionnel pour effet plus doux */
+}
+
+/* Compatibilité étendue */
+.input-wifi::-webkit-input-placeholder { /* Chrome/Safari/Edge */
+  color: white;
+  opacity: 0.6;
 }
 
 .btn-wrapper {
@@ -1181,7 +1215,6 @@ input:checked +.slider:before {
 
 .btn-connect {
   padding: 10px 30px;
-  /* largeur contrôlée par padding horizontal */
   background-color: transparent;
   color: #07CEC9;
   border: 2.3px solid #07CEC9;
@@ -1189,17 +1222,54 @@ input:checked +.slider:before {
   cursor: pointer;
   font-size: 16px;
   display: inline-block;
-  /* Pour que le bouton garde sa taille naturelle */
   margin: 0 auto;
-  /* Centrage si dans un conteneur en display: block */
+  position: relative;
+  min-width: 120px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-
-
+/* Effet au survol */
 .btn-connect:hover {
   background-color: #07CEC9;
   color: #E6EAEE;
 }
+
+/* Spinner quand loading */
+.btn-connect.loading {
+  color: transparent;
+  pointer-events: none;
+  background-color: #07CEC9; /* optionnel : changer fond pendant chargement */
+}
+
+.btn-connect.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid #07CEC9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* État désactivé */
+.btn-connect:disabled {
+  border-color: #888;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
 
 .icon-eye {
   width: 25px;

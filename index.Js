@@ -178,18 +178,44 @@ buttons.forEach(button => {
     button.classList.add('active');
   });
 });
+function isESPConnected() {
+  return fetch('http://192.168.4.1/status', { method: 'GET', mode: 'no-cors' })
+    .then(() => true) // Si fetch ne lève pas d'erreur, c’est connecté
+    .catch(() => false); // Sinon, échec
+}
 
 // Détail éclairage
 
 function showDetail(button) {
-const targetId = button.getAttribute('data-target');
+  const targetId = button.getAttribute('data-target');
+  const currentSection = button.closest('.section-content');
 
-// Masquer toutes les sections
-document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+  if (currentSection && currentSection.id === 'detail-m1-2' && targetId === 'detail-m1-3') {
+    const loader = document.getElementById('loaderWifi');
+    if (loader) loader.style.display = 'block';
 
-// Afficher la section cible
-document.getElementById(targetId).classList.add('active');
+    // Vérifier connexion ESP8266
+    isESPConnected().then(isConnected => {
+      if (loader) loader.style.display = 'none';
+
+      if (isConnected) {
+        // Masquer toutes les sections
+        document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+        document.getElementById(targetId).classList.add('active');
+      } else {
+        alert("❌ Connexion au module ESP8266 échouée.\nVeuillez vérifier que vous êtes connecté au Wi-Fi SmartSwitch-XXXX.");
+      }
+    });
+  } else {
+    // Cas normal
+    document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+    document.getElementById(targetId).classList.add('active');
+  }
 }
+
+
+
+
 
 function goBack() {
 // Masquer toutes les sections
@@ -212,12 +238,12 @@ function goBackM11() {
   // Réafficher la liste des modules
   document.getElementById('detail-m1-2').classList.add('active');
   }
-  function goBackM13() {
+  function goBackM12() {
     // Masquer toutes les sections
     document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
     
     // Réafficher la liste des modules
-    document.getElementById('detail-m1-3').classList.add('active');
+    document.getElementById('detail-m1-1').classList.add('active');
     }
   function goBackM14() {
     // Masquer toutes les sections
@@ -231,7 +257,7 @@ function goBackM2() {
   document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
   
   // Réafficher la liste des modules
-  document.getElementById('detail-m1-1').classList.add('active');
+  document.getElementById('detail-m1-3').classList.add('active');
   }
 
 // Fonction pour voir le mot de passe
@@ -307,3 +333,45 @@ function togglePassword(eyeIcon) {
     });
   });
 
+// pour empecher connexion
+
+  const ssidInput = document.getElementById("ssid");
+  const passwordInput = document.getElementById("password1");
+  const connectButton = document.getElementById("connectBtn");
+
+  function checkInputs() {
+    const ssidFilled = ssidInput.value.trim() !== "";
+    const passwordFilled = passwordInput.value.trim() !== "";
+    connectButton.disabled = !(ssidFilled && passwordFilled);
+  }
+
+  ssidInput.addEventListener("input", checkInputs);
+  passwordInput.addEventListener("input", checkInputs);
+
+  function handleConnection() {
+    // Activer le spinner
+    connectButton.classList.add("loading");
+
+    // Simuler une connexion (par exemple, 5 secondes)
+    setTimeout(() => {
+      connectButton.classList.remove("loading");
+
+      // Ici tu peux appeler ta fonction showDetail(this) si la connexion réussit
+      showDetail(connectButton);
+    }, 1000); // Remplace par ta logique réelle de connexion
+  }
+
+  function togglePassword(icon) {
+    const targetId = icon.getAttribute("data-target");
+    const input = document.getElementById(targetId);
+    const isPassword = input.type === "password";
+    input.type = isPassword ? "text" : "password";
+    icon.src = isPassword ? "Icones/eye-off.png" : "Icones/eye.png";
+  }
+
+
+
+
+
+
+  

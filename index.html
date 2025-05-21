@@ -380,6 +380,7 @@
                   Un point d’accès est crée avec un SSID: Smart-xxxx et
                   mot de passe par défaut Fortico.1234.
                 </h3>
+
               </div>
 
               <div class="retour">
@@ -387,74 +388,47 @@
                 <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
               </div>
             </div>
-
-            <!-- Connexion au module -->
             <div id="detail-m1-2" class="section-content">
 
               <div class="detailHaut">
                 <h2>
-                  Connexion au module
+                  Brancher votre appareille
                 </h2>
               </div>
-              <div class="detailBasWifi">
-                <div class="wifi">
-                  <h3 class="texte-centreWifi">
-                    Sélectionnez le point d’accès Wi-Fi et
-                    saisissez le mot de passe.
-                  </h3>
+              <div class="detailBas">
+                <img src="Icones/module.png" class="icon-module">
+                <h3 class="texte-centre">
+                  Veuillez vous connecter la deçu.
+                </h3>
+                <div id="loaderWifi" class="loader-wifi" style="display: none;"></div>
 
-                  <div class="input-wrapper">
-                    <div class="input-label">
-                      <img src="Icones/wifi-off.png" alt="Wi-Fi" class="icon-wifi" />
-                      <input type="text" placeholder="Nom du point d'accès" class="input-wifi" />
-                      <span class="text-select">Sélectionner le Wi-Fi</span>
-                    </div>
-                  </div>
+              </div>
 
-
-                  <div class="input-wrapper">
-                    <div class="input-label">
-                      <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
-
-                      <input type="password" id="password1" placeholder="Mot de passe" class="input-wifi" />
-
-                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)"
-                        data-target="password1" />
-                    </div>
-                  </div>
-
-
-                  <div class="btn-wrapper">
-                    <button class="btn-retour-data" onclick="goBackM2()">⬅</button>
-                    <button class="btn-connect" data-target="detail-m1-3" onclick="showDetail(this)">Connecter</button>
-                  </div>
-                </div>
-
+              <div class="retour">
+                <button class="btn-retour" onclick="goBackM12()">⬅ Retour</button>
+                <button class="btn-suivant" data-target="detail-m1-3" onclick="showDetail(this)">Suivant ➡</button>
               </div>
             </div>
+
             <div id="detail-m1-3" class="section-content">
               <div class="detailHaut-conf">
-                <h2>
-                  Configuration module
-                </h2>
-                <h3>
-                  Connecter au module SmartSwitch-XXXX
-
-                </h3>
+                <h2>Configuration module</h2>
+                <h3>Connecter au module SmartSwitch-XXXX</h3>
               </div>
+            
               <div class="detailBas">
                 <img src="Icones/router.png" class="icon-module-router">
                 <h3 class="texte-centre">
-                  Entrer les paramètre du routeur afin que le
-                  module puisse y connecter.
+                  Entrer les paramètre du routeur afin que le module puisse y connecter.
                 </h3>
               </div>
-
+            
               <div class="retour">
                 <button class="btn-retour" onclick="goBackM11()">⬅ Retour</button>
                 <button class="btn-suivant" data-target="detail-m1-4" onclick="showDetail(this)">Suivant ➡</button>
               </div>
             </div>
+            
 
 
             <div id="detail-m1-4" class="section-content">
@@ -472,7 +446,7 @@
                   </h3>
                   <div class="type-wifi">
                     <p>
-                      <span class="error">×</span> Wi-Fi – 50GHz
+                      <span class="error">×</span> Wi-Fi – 5GHz
                       <img src="Icones/icons8-case-à-cocher-non-cochée-100.png" alt="Wi-Fi Off" class="icon">
                     </p>
                     <p>
@@ -484,35 +458,30 @@
                   <div class="input-wrapper">
                     <div class="input-label">
                       <img src="Icones/wifi-off.png" alt="Wi-Fi" class="icon-wifi" />
-                      <input type="text" placeholder="Nom du point d'accès" class="input-wifi" />
+                      <input type="text" id="ssid" placeholder="Nom du point d'accès" class="input-wifi" />
                       <span class="text-select">Sélectionner le Wi-Fi</span>
                     </div>
                   </div>
-
-
+              
                   <div class="input-wrapper">
                     <div class="input-label">
                       <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
-
-                      <input type="password" id="password2" placeholder="Confirmez le mot de passe"
-                        class="input-wifi" />
-
-                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)"
-                        data-target="password2" />
+                      <input type="password" id="password1" placeholder="Mot de passe" class="input-wifi" />
+                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)" data-target="password1" />
                     </div>
                   </div>
-
-
+              
                   <div class="btn-wrapper">
-                    <button class="btn-retour-data" onclick="goBackM13()">⬅</button>
-                    <button class="btn-connect" data-target="detail-m1-5" onclick="showDetail(this)">Connecter</button>
+                    <button class="btn-retour-data" onclick="goBackM2()">⬅</button>
+                    <p id="status" style="text-align:center; color: gray;">Connexion en cours...</p>
+
+                    <button class="btn-connect" id="connectBtn" data-target="detail-m1-5" onclick="handleConnection()" disabled>
+                      Connecter
+                    </button>
                   </div>
-                </div>
-
-
-
               </div>
             </div>
+          </div>
 
             <div id="detail-m1-5" class="section-content">
               <div class="detailHaut-conf">
