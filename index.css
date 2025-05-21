@@ -25,9 +25,9 @@ header {
 
 .myHome {
   background-color: transparent;
-  height: 170px;
+  /* height: 170px; */
   background-color: #373742;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: #595968;
 }
 
@@ -37,6 +37,38 @@ header {
   background-color: #373742;
   padding: 6px 4px;
   box-sizing: border-box;
+}
+
+/* 
+MY HOME
+*/
+#upload{
+  display: none;
+}
+.pdp img {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.import-pdp img {
+  position: absolute;
+  height: 28px;
+  left: 153px;
+  top: 195px;
+  cursor: pointer;
+}
+
+.pdp {
+  position: relative;
+  left: 34px;
+  top: 11px;
+}
+
+.myHome h3 {
+  text-align: center;
+  color: white;
 }
 
 @media (max-width: 1265px) {
@@ -371,7 +403,7 @@ footer {
     position: fixed;
     width: 250px;
     height: 100vh;
-    background: #2c3e50;
+    /* background: #2c3e50; */
     left: -250px;
     top: 0;
     z-index: 100;
@@ -427,7 +459,7 @@ footer {
   #check:checked~.section_droite {}
 
   .section_Gauche {
-    background: #470088;
+    /* background: #470088; */
     /* height: 80px; */
     /* width: 50%; */
     transition: all 0.4s;
