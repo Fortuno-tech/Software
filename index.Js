@@ -1,40 +1,26 @@
-// var body = document.getElementById("body");
+// Profil pic and save
+const upload = document.getElementById('upload');
+    const profilePic = document.getElementById('profile-pic');
+    // Charger l'image du localStorage si elle existe
+    const savedImage = localStorage.getItem('profileImage');
+    if (savedImage) {
+      profilePic.src = savedImage;
+    }
 
-// const navLinks = document.getElementById("check");
-// function toggleMenu() {
-//   navLinks.classList.toggle("check");
-//   const SG = document.getElementsByClassName("section_Gauche")[0];
-//   if (body.offsetWidth <= 970) {
-//     if (navLinks.className == "check") {
-//       SG.style.left = "0%";
-//       SG.style.position = "";
-//     } else {
-//       SG.style.left = "-100%";
-//       //   SG.style.position = "fixed";
-//     }
-//   } else if (body.offsetWidth > 970) {
-//     navLinks.className = "";
-//     alert("ok");
-//   }
-// }
-// document.getElementById("menu").addEventListener("click", () => {});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Quand une image est importée
+    upload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const imageData = e.target.result;
+          profilePic.src = imageData;
+          localStorage.setItem('profileImage', imageData); // Enregistrer dans le navigateur
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+//**
 document.addEventListener('DOMContentLoaded', function() {
   const check = document.getElementById("check");
   const sectionGauche = document.getElementById("sectionGauche");

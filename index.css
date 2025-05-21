@@ -46,10 +46,47 @@ h1 {
 
 .myHome {
   background-color: transparent;
-  height: 170px;
+  height: 200px;
   background-color: #252e44;
   border-style: solid;
   border-color: transparent;
+}
+#upload{
+  display: none;
+}
+.pdp img {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.import-pdp img {
+  position: absolute;
+  height: 28px;
+  left: 153px;
+  top: 195px;
+  cursor: pointer;
+}
+
+.pdp {
+  position: relative;
+  left: 34px;
+  top: 11px;
+}
+
+.myHome h3 {
+  font-family: calibri;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.image-background {
+  background-color: black;
+  border-radius: 30px;
+  padding: 8px; /* espace entre l’image et le fond noir */
+  display: inline-block;
 }
 
 
