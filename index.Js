@@ -348,18 +348,7 @@ function togglePassword(eyeIcon) {
   ssidInput.addEventListener("input", checkInputs);
   passwordInput.addEventListener("input", checkInputs);
 
-  function handleConnection() {
-    // Activer le spinner
-    connectButton.classList.add("loading");
 
-    // Simuler une connexion (par exemple, 5 secondes)
-    setTimeout(() => {
-      connectButton.classList.remove("loading");
-
-      // Ici tu peux appeler ta fonction showDetail(this) si la connexion réussit
-      showDetail(connectButton);
-    }, 1000); // Remplace par ta logique réelle de connexion
-  }
 
   function togglePassword(icon) {
     const targetId = icon.getAttribute("data-target");
