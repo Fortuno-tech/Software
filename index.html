@@ -4,29 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+  <script src="./firmware.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-
 <body id="body">
   <div class="block_Entier">
     <header>
-      <div>
-        <div style="display: flex;justify-content: space-between;">
-          <div>
-            <input type="checkbox" id="check" onclick="toggleMenu()">
-            <span>Fortico Smart Home</span>
-          </div>
-          <div id="menu">
-            <label for="check" class="checkbtn" id="icon_menu" style="margin-right: 16px;">
-              <i class="fas fa-bars">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </i>
-            </label>
-          </div>
-        </div>
+      <div class="container-head">
+        <h1>
+          <span class="head1">Fortico</span>
+          <span class="head2">Smart</span>
+          <span class="head3">Home</span>
+        </h1>
       </div>
     </header>
     <!-- GAUCHE 
@@ -119,13 +110,20 @@
 
         <div id="img_fonctionalite" class="img_fonctionalite">
           <div class="Big_image_Home">
-            <img src="Images/téléchargement.jpeg" alt="salle d'accueil" width="100%" height="100%" />
+            <!-- suppression de : 
+             <img src="Images/téléchargement.jfif" alt="txt" width="" height="">
+             ajout de img id="randomImage" src=""... 
+              -->
+            <img id="randomImage" src="" alt="txt" width="" width="300">
+
+
           </div>
           <div class="fonctionalite">
-            <div class="F1"></div>
-            <div class="F2"></div>
-            <div class="F3"></div>
-            <div class="F4"></div>
+            <div class="F1">
+              <img src="./Icones/ajoutLow.png">
+              <h2>Ajout équipement</h2>
+            </div>
+
           </div>
         </div>
 
@@ -136,45 +134,130 @@
                         -->
             <div class="left-block">
               <div class="location">
-                <img src="/Icones/icons8-place-marker-100.png" alt="Localisation">
+                <img src="./Icones/icons8-place-marker-100.png" alt="Localisation">
                 <div id="city">Tamatave, 501</div>
               </div>
               <div class="time-date" id="time-date">Chargement...</div>
             </div>
-
             <!-- Bloc droit : 3 icônes météo -->
             <div class="right-block">
               <div class="info-block">
-                <img src="/Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
+                <img src="./Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
                 <div id="weather-value">--%</div>
               </div>
               <div class="info-block">
-                <img src="/Icones/icons8-humide-100 (1).png" alt="Humidité">
+                <img src="./Icones/icons8-humide-100 (1).png" alt="Humidité">
                 <div id="humidity">--%</div>
               </div>
               <div class="info-block">
-                <img src="/Icones/temperature.png" alt="Température">
+                <img src="./Icones/temperature.png" alt="Température">
                 <div id="temp">--°C</div>
               </div>
             </div>
           </div>
           <!-- 
                      Fin de la classe Meteo -->
-          <div class="flex_bedroom">
-            <div class="bedroom">
-              <img src="Images/Master Bedrooms Decor Modern Storage.jpeg" alt="bedroom moderne et épurée" height="190px"
-                width="203px" style="border-radius: 15px;" />
-            </div>
-            <div class="bedroom">
-              <img src="Images/Décoration moderne et épurée dans véranda.jpeg" alt="bedroom modern" height="190px"
-                width="203px" style="border-radius: 15px;" />
-            </div>
+
+          <div class="bedroom">
+            <img src="./Icones/ajoutLow.png">
+            <h2>Ajout Caméra</h2>
           </div>
+
+
       </section>
       <!-- Section Appareil -->
       <section id="section_Appareil" class="content-section" style="display: none;">
-        <p>Mes Appareils</p>
-
+        <div class="container-top">
+          <p>Appareil</p>
+        </div>
+        <div class="container">    
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Équipement</th>
+              <th>Nom</th>
+              <th>Adresse MAC</th>
+              <th>Emplacement</th>
+              <th>Statut</th>
+              <th>Date de mise en service</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img class="icon-leftDevis" src="./Icones/lumiere.png" alt="" ></td>
+              <td>Smart switch V1 M1</td>
+              <td>C8:C7:A3:3F:6C:3F</td>
+              <td>Séjour</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>12/05/25</td>
+              <td class="dots">⋮</td>
+            </tr>
+            <tr>
+              <td><img class="icon-leftDevis" src="./Icones/prise.png" alt="" ></td>
+              <td>Prise connecter</td>
+              <td>C8:C10:A4:2F:6C:3A</td>
+              <td>Cuisine</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>18/05/25</td>
+              <td class="dots">⋮</td>
+            </tr>
+            <tr>
+              <td><img class="icon-leftDevis" src="./Icones/clim.png" alt="" ></td>
+              <td>Climatiseur</td>
+              <td>F8:C9:A3:2F:6C:3A</td>
+              <td>Chambre bébé</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>12/05/25</td>
+              <td class="dots">⋮</td>
+            </tr>
+            <tr>
+              <td><img class="icon-leftDevis" src="./Icones/sonnette.png" alt="" ></td>
+              <td>Sonnette</td>
+              <td>J8:C9:A3:2F:6C:3F</td>
+              <td>Véranda</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>15/05/25</td>
+              <td class="dots">⋮</td>
+            </tr>
+            <tr>
+              <td><img class="icon-leftDevis" src="./Icones/nuage.png" alt="" ></td>
+              <td>Station météo</td>
+              <td>K8:C9:A3:2F:6C:3F</td>
+              <td>Véranda</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>20/05/25</td>
+              <td class="dots">⋮</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
       </section>
 
       <!-- Section Chambre -->
@@ -240,11 +323,7 @@
               </ul>
             </nav>
           </div>
-          <div class="container-right">
-            <!-- Section liste des modules -->
 
-
-          </div>
 
       </section>
 
@@ -423,29 +502,169 @@
                     <div class="input-label">
                       <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
 
+<<<<<<< HEAD
                       <input type="password" id="password" placeholder="Mot de passe" class="input-wifi" />
 
                       <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword()"
                         id="eyeIcon" />
+=======
+                      <input type="password" id="password1" placeholder="Mot de passe" class="input-wifi" />
+
+                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)"
+                        data-target="password1" />
+>>>>>>> 083295470b204bc6f96d53f68920561612a6d49e
                     </div>
                   </div>
 
 
                   <div class="btn-wrapper">
-                    <button class="btn-connect">Connecter</button>
+                    <button class="btn-retour-data" onclick="goBackM2()">⬅</button>
+                    <button class="btn-connect" data-target="detail-m1-3" onclick="showDetail(this)">Connecter</button>
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <div class="retour">
                   <button class="btn-retour" onclick="goBackM1()">⬅ Retour</button>
                   <button class="btn-suivant" data-target="detail-m1-2" onclick="showDetail(this)">Suivant ➡</button>
                 </div>
               </div>
 
+=======
+              </div>
+            </div>
+            <div id="detail-m1-3" class="section-content">
+              <div class="detailHaut-conf">
+                <h2>
+                  Configuration module
+                </h2>
+                <h3>
+                  Connecter au module SmartSwitch-XXXX
+
+                </h3>
+              </div>
+              <div class="detailBas">
+                <img src="Icones/router.png" class="icon-module-router">
+                <h3 class="texte-centre">
+                  Entrer les paramètre du routeur afin que le
+                  module puisse y connecter.
+                </h3>
+              </div>
+
+              <div class="retour">
+                <button class="btn-retour" onclick="goBackM11()">⬅ Retour</button>
+                <button class="btn-suivant" data-target="detail-m1-4" onclick="showDetail(this)">Suivant ➡</button>
+              </div>
+>>>>>>> 083295470b204bc6f96d53f68920561612a6d49e
             </div>
 
 
+            <div id="detail-m1-4" class="section-content">
 
+              <div class="detailBasWifi">
+                <div class="wifi">
+                  <h3 class="texte-centreWifi">
+                    Sélectionnez le réseau Wi-Fi 2,4 GHz et
+                    saisissez le mot de passe.
+
+                  </h3>
+                  <h3 class="centreWifi">
+                    Si votre Wi-Fi est 5 GHz, veuillez le réglez sur 2,4GHz
+
+                  </h3>
+                  <div class="type-wifi">
+                    <p>
+                      <span class="error">×</span> Wi-Fi – 50GHz
+                      <img src="Icones/icons8-case-à-cocher-non-cochée-100.png" alt="Wi-Fi Off" class="icon">
+                    </p>
+                    <p>
+                      <span class="valid">√</span> Wi-Fi – 2.4GHz
+                      <img src="Icones/icons8-wifi-100 (1).png" alt="Wi-Fi On" class="icon">
+                    </p>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <div class="input-label">
+                      <img src="Icones/wifi-off.png" alt="Wi-Fi" class="icon-wifi" />
+                      <input type="text" placeholder="Nom du point d'accès" class="input-wifi" />
+                      <span class="text-select">Sélectionner le Wi-Fi</span>
+                    </div>
+                  </div>
+
+
+                  <div class="input-wrapper">
+                    <div class="input-label">
+                      <img src="Icones/lock.png" alt="Lock" class="icon-wifi" />
+
+                      <input type="password" id="password2" placeholder="Confirmez le mot de passe"
+                        class="input-wifi" />
+
+                      <img src="Icones/eye.png" alt="Afficher" class="icon-eye" onclick="togglePassword(this)"
+                        data-target="password2" />
+                    </div>
+                  </div>
+
+
+                  <div class="btn-wrapper">
+                    <button class="btn-retour-data" onclick="goBackM13()">⬅</button>
+                    <button class="btn-connect" data-target="detail-m1-5" onclick="showDetail(this)">Connecter</button>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+
+            <div id="detail-m1-5" class="section-content">
+              <div class="detailHaut-conf">
+                <h2>
+                  Module connecter avec succès
+                </h2>
+                <h3>
+                  Connecter au module SmartSwitch-XXXX
+
+                </h3>
+              </div>
+              <div class="detailBas">
+                <img src="Icones/module.png" class="icon-module">
+                <h3 class="texte-centre">
+                  Module connecter avec succès
+                </h3>
+              </div>
+
+              <div class="retour">
+                <button class="btn-retour" onclick="goBackM14()">⬅ Retour</button>
+                <button class="btn-suivant" data-target="detail-m1-6" onclick="showDetail(this)">Suivant ➡</button>
+              </div>
+            </div>
+
+            <div id="detail-m1-6" class="section-content">
+              <div class="container-pair">
+                <div class="box-rounded1">
+                  <div class="top-section">
+                    <img src="/Icones/icons8-lumière-100.png" class="icon-light" />
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="bottom-section">
+                    <div class="texts">
+                      <p class="p1">Light</p>
+                      <p class="p2">SmartSwitch-xxxx </p>
+                    </div>
+                    <button class="more-btn">...</button>
+                  </div>
+                </div>
+
+                <div class="box-rounded2">
+                  <img src="/Icones/ajoutLow.png">
+                  <h2>Ajout équipement</h2>
+                </div>
+              </div>
+            </div>
 
 
 
@@ -462,9 +681,6 @@
               <p>Status : En ligne</p>
               <button onclick="goBack()">⬅ Retour</button>
             </div>
-
-
-
             <div id="section_Prise" class="section-content">Contenu Prise connectée</div>
             <div id="section_Climatiseur" class="section-content">Contenu Climatiseur</div>
             <div id="section_Sonnette" class="section-content">Contenu Sonnette</div>
@@ -475,9 +691,36 @@
             <div id="section_Porte" class="section-content">Contenu Détecteur de porte</div>
           </div>
         </div>
-    </div>
-    </section>
+      </section>
 
+      <!-- Section Appareil -->
+      <section id="section_scene" class="content-section" style="display: none;">
+        <div class="conteneur-hautScene">
+          <p>Scène</p>
+        </div>
+        <div class="conteneur-basScene">
+          <p>Cette page n’est pas encore disponible</p>
+        </div>
+      </section>
+
+      <!-- Section Appareil -->
+      <section id="section_acces" class="content-section" style="display: none;">
+        <div class="conteneur-hautAcces">
+          <p>Acces</p>
+        </div>
+        <div class="conteneur-basAcces">
+          <p>Cette page n’est pas encore disponible</p>
+        </div>
+      </section>
+      <!-- Section Appareil -->
+      <section id="section_parametre" class="content-section" style="display: none;">
+        <h1>parametre</h1>
+        <p>Contenu des parametre</p>
+      </section>
+    </div>
+    <footer>
+
+<<<<<<< HEAD
     <!-- Section Appareil -->
     <section id="section_scene" class="content-section" style="display: none;">
       <div class="conteneur-hautScene">
@@ -502,12 +745,10 @@
       <h1>parametre</h1>
       <p>Contenu des parametre</p>
     </section>
+=======
+    </footer>
+>>>>>>> 083295470b204bc6f96d53f68920561612a6d49e
   </div>
-  <footer>
-
-  </footer>
-  </div>
-  <script src="./index.Js"></script>
 </body>
 
 </html>

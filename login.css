@@ -1,0 +1,83 @@
+body{
+    margin: auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(230, 234, 238);
+    background-color: rgb(42, 42, 50);
+}
+
+header .container{
+    background-color:rgb(55, 55, 66);
+    padding: 10px 10px 0px 20px;
+    margin-bottom: 0px;
+}
+.head3{
+    font-weight: initial;
+}
+.corps{
+    height:95vh;
+    width:100%;
+    margin-top: 1px;
+    display: flex;
+    line-height: 30px;
+}
+.imge_log{
+    margin-top: 30px;
+    height: 360px;
+    width: 400px;
+
+}
+
+.ct_gauche{
+    height: 95vh;
+    width:60%;
+    background-color: rgb(55, 55, 66);
+}
+.gc_corp{
+    height: 80vh;
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+}
+.tech{
+    margin:20px;
+}
+
+.toutlog{
+    height: 95vh;
+    width:40%;
+    display:list-item;
+    background-color: rgb(55, 55, 66);
+
+}
+.p_droite1, .links{
+    text-align: center;
+    padding-right: 35%;
+}
+
+.google-btn, .entrer , .login-btn{
+    width: 65%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(74, 74, 88);
+    box-shadow: none;
+    font-size: x-large; 
+    font-weight: bolder;
+    border: none;
+}
+.log1, .log2, .log3, .tech{
+    font-size: x-large; 
+    font-weight: bolder;   
+}
+
+.head1, .mais, .creation{
+    text-decoration: none;
+    color:rgb(7, 206, 201);
+}
+.login-btn{
+    background-color: rgb(7, 206, 201);
+    color: rgb(230, 234, 238);
+}
+.continue{
+    color:rgb(230, 234, 238);
+    font-size:medium;
+}
