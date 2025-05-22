@@ -109,53 +109,7 @@ function updateDateTime() {
 updateDateTime();
 setInterval(updateDateTime, 60000);
 
-
-// -- Script Météo OpenWeatherMap
-const apiKey = "b08faa524136fbdd26068e4faf0f73ee";
-const city = "Tamatave,MG";
-
-async function fetchWeather() {
-  try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`;
-    const response = await fetch(url);
-    const data = await response.json();
-
-    const temp = Math.round(data.main.temp);
-    const humidity = data.main.humidity;
-    const weatherMain = data.weather[0].main.toLowerCase();
-
-    document.getElementById("temp").textContent = `${temp}°C`;
-    document.getElementById("humidity").textContent = `${humidity}%`;
-
-    const rainValue = data.rain && data.rain["1h"] ? `${data.rain["1h"]}mm` : "0mm";
-    document.getElementById("weather-value").textContent = rainValue;
-
-    const iconMap = {
-      "clear": "/Icones/icons8-soleil-100.png",
-      "clouds": "/Icones/icons8-nuage-100.png",
-      "rain": "/Icones/icons8-pluie-100.png",
-      "drizzle": "/Icones/icons8-pluie-100.png",
-      "thunderstorm": "/Icones/icons8-orage-100.png"
-    };
-    document.getElementById("weather-img").src = iconMap[weatherMain] || "/Icones/icons8-nuage-100.png";
-  } catch (err) {
-    console.error("Erreur météo :", err);
-  }
-}
-fetchWeather();
-
-
 // Script pour ajout apparéil
-
-
-
-
-
-
-
-
-
-
 
 const buttons = document.querySelectorAll('.nav-link_devis');
 const sections1 = document.querySelectorAll('.section-content');
@@ -178,44 +132,6 @@ buttons.forEach(button => {
     button.classList.add('active');
   });
 });
-function isESPConnected() {
-  return fetch('http://192.168.4.1/status', { method: 'GET', mode: 'no-cors' })
-    .then(() => true) // Si fetch ne lève pas d'erreur, c’est connecté
-    .catch(() => false); // Sinon, échec
-}
-
-// Détail éclairage
-
-function showDetail(button) {
-  const targetId = button.getAttribute('data-target');
-  const currentSection = button.closest('.section-content');
-
-  if (currentSection && currentSection.id === 'detail-m1-2' && targetId === 'detail-m1-3') {
-    const loader = document.getElementById('loaderWifi');
-    if (loader) loader.style.display = 'block';
-
-    // Vérifier connexion ESP8266
-    isESPConnected().then(isConnected => {
-      if (loader) loader.style.display = 'none';
-
-      if (isConnected) {
-        // Masquer toutes les sections
-        document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
-        document.getElementById(targetId).classList.add('active');
-      } else {
-        alert("❌ Connexion au module ESP8266 échouée.\nVeuillez vérifier que vous êtes connecté au Wi-Fi SmartSwitch-XXXX.");
-      }
-    });
-  } else {
-    // Cas normal
-    document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
-    document.getElementById(targetId).classList.add('active');
-  }
-}
-
-
-
-
 
 function goBack() {
 // Masquer toutes les sections
@@ -259,7 +175,13 @@ function goBackM2() {
   // Réafficher la liste des modules
   document.getElementById('detail-m1-3').classList.add('active');
   }
-
+  function showDetailM1() {
+    // Masquer toutes les sections
+    document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+    
+    // Réafficher la liste des modules
+    document.getElementById('detail-m1').classList.add('active');
+    }
 // Fonction pour voir le mot de passe
 function togglePassword(eyeIcon) {
   const targetId = eyeIcon.getAttribute("data-target");

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js" defer></script>
   <script src="./firmware.js" defer></script>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
@@ -413,7 +414,7 @@
             <div id="detail-m1-3" class="section-content">
               <div class="detailHaut-conf">
                 <h2>Configuration module</h2>
-                <h3>Connecter au module SmartSwitch-XXXX</h3>
+                <h3 id="moduleTitle">Connecter au module SmartSwitchC1-XXXX</h3>
               </div>
             
               <div class="detailBas">
@@ -425,7 +426,7 @@
                  ...
                 </h3>
                 <p>Adresse MAC du module : <span id="macAddress">En attente...</span></p>
-
+             
               </div>
             
               <div class="retour">
@@ -488,53 +489,58 @@
             </div>
           </div>
 
-            <div id="detail-m1-5" class="section-content">
-              <div class="detailHaut-conf">
-                <h2>
-                  Module connecter avec succès
-                </h2>
-                
-
-              </div>
-              <div class="detailBas">
-                <img src="Icones/module.png" class="icon-module">
-                <h3 class="texte-centre">
-                  Module connecter avec succès
-                </h3>
-              </div>
-
-              <div class="retour">
-                <button class="btn-retour" onclick="goBackM14()">⬅ Retour</button>
-                <button class="btn-suivant" data-target="detail-m1-6" onclick="showDetail(this)">Suivant ➡</button>
-              </div>
+          <div id="detail-m1-5" class="section-content">
+            <div class="detailHaut-conf">
+              <h2>
+                Module connecté avec succès
+              </h2>
             </div>
-
-            <div id="detail-m1-6" class="section-content">
-              <div class="container-pair">
-                <div class="box-rounded1">
-                  <div class="top-section">
-                    <img src="/Icones/icons8-lumière-100.png" class="icon-light" />
-                    <label class="switch">
-                      <input type="checkbox" />
-                      <span class="slider"></span>
-                    </label>
-                  </div>
-
-                  <div class="bottom-section">
-                    <div class="texts">
-                      <p class="p1">Light</p>
-                      <p class="p2">SmartSwitch-xxxx </p>
-                    </div>
-                    <button class="more-btn">...</button>
-                  </div>
+            <div class="detailBas">
+              <img src="Icones/module.png" class="icon-module">
+              <h3 class="texte-centre">
+                Module connecté avec succès
+              </h3>
+              <p>Topic MQTT : <span id="mqttTopic">...</span></p>
+              <button onclick="publishMQTT()">📤 Envoyer un test</button>
+            </div>
+          
+            <div class="retour">
+              <button class="btn-retour" onclick="goBackM14()">⬅ Retour</button>
+              <button class="btn-suivant" data-target="detail-m1-6" onclick="showDetail(this)">Suivant ➡</button>
+            </div>
+          </div>
+          
+          <div id="detail-m1-6" class="section-content">
+            <div class="container-pair">
+              <div class="box-rounded1">
+                <div class="top-section">
+                  <img src="/Icones/icons8-lumière-100.png" class="icon-light" id="lightIcon" />
+                  
+                  <!-- ✅ Ajout de l'onclick ici -->
+                  <label class="switch">
+                    <input type="checkbox" onclick="publishMQTT(this)" />
+                    <span class="slider"></span>
+                  </label>
                 </div>
-
-                <div class="box-rounded2">
-                  <img src="/Icones/ajoutLow.png">
-                  <h2>Ajout équipement</h2>
+              
+                <div class="bottom-section">
+                  <div class="texts">
+                    <p class="p1">Light</p>
+                    <h3 id="moduleTitle" class="p2">SmartSwitch-xxxx</h3>
+                  </div>
+                  <button class="more-btn">...</button>
                 </div>
               </div>
+              
+          
+              <div class="box-rounded2" onclick="showDetailM1()">
+                <img src="/Icones/ajoutLow.png">
+                <h2>Ajout équipement</h2>
+              </div>
+              
             </div>
+          </div>
+          
 
 
 
