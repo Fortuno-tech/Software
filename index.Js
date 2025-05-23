@@ -281,7 +281,34 @@ function togglePassword(eyeIcon) {
   }
 
 
+  let switchCount = 1;
 
+  function addSmartSwitch() {
+    switchCount++;
+    const container = document.getElementById("containerPair");
+
+    const newBox = document.createElement("div");
+    newBox.className = "box-rounded1";
+    newBox.innerHTML = `
+      <div class="top-section">
+        <img src="/Icones/icons8-lumière-100.png" class="icon-light" />
+        <label class="switch">
+          <input type="checkbox" onclick="publishMQTT(this)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="bottom-section">
+        <div class="texts">
+          <p class="p1">Light</p>
+          <h3 class="p2 module-title">SmartSwitch-${String(switchCount).padStart(3, '0')}</h3>
+        </div>
+        <button class="more-btn">...</button>
+      </div>
+    `;
+
+    const addButton = container.querySelector(".box-rounded2");
+    container.insertBefore(newBox, addButton);
+  }
 
 
 

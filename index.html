@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./Style pour boutn éclairage.css">
   <script src="./index.js" defer></script>
   <script src="./firmware.js" defer></script>
+  <script src="./Bouton éclairage.js" defer></script>
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -169,11 +171,102 @@
 
 
       </section>
-      <!-- Section Appareil -->
-      <section id="section_Appareil" class="content-section" style="display: none;">
-        <p>Mes Appareils</p>
 
-      </section>
+
+          <!-- Section Appareil -->
+          <section id="section_Appareil" class="content-section" style="display: none;">
+            <div class="container-top">
+              <p>Appareil</p>
+            </div>
+            <div class="container">    
+          
+            <table>
+              <thead>
+                <tr>
+                  <th>Équipement</th>
+                  <th>Nom</th>
+                  <th>Adresse MAC</th>
+                  <th>Emplacement</th>
+                  <th>Statut</th>
+                  <th>Date de mise en service</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img class="icon-leftDevis" src="./Icones/lumiere.png" alt="" ></td>
+                  <td>Smart switch V1 M1</td>
+                  <td>C8:C7:A3:3F:6C:3F</td>
+                  <td>Séjour</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="sliderAppareil"></span>
+                    </label>
+                  </td>
+                  <td>12/05/25</td>
+                  <td class="dots">⋮</td>
+                </tr>
+                <tr>
+                  <td><img class="icon-leftDevis" src="./Icones/prise.png" alt="" ></td>
+                  <td>Prise connecter</td>
+                  <td>C8:C10:A4:2F:6C:3A</td>
+                  <td>Cuisine</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                  </td>
+                  <td>18/05/25</td>
+                  <td class="dots">⋮</td>
+                </tr>
+                <tr>
+                  <td><img class="icon-leftDevis" src="./Icones/clim.png" alt="" ></td>
+                  <td>Climatiseur</td>
+                  <td>F8:C9:A3:2F:6C:3A</td>
+                  <td>Chambre bébé</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox"/>
+                      <span class="sliderAppareil"></span>
+                    </label>
+                  </td>
+                  <td>12/05/25</td>
+                  <td class="dots">⋮</td>
+                </tr>
+                <tr>
+                  <td><img class="icon-leftDevis" src="./Icones/sonnette.png" alt="" ></td>
+                  <td>Sonnette</td>
+                  <td>J8:C9:A3:2F:6C:3F</td>
+                  <td>Véranda</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox"/>
+                      <span class="slider"></span>
+                    </label>
+                  </td>
+                  <td>15/05/25</td>
+                  <td class="dots">⋮</td>
+                </tr>
+                <tr>
+                  <td><img class="icon-leftDevis" src="./Icones/nuage.png" alt="" ></td>
+                  <td>Station météo</td>
+                  <td>K8:C9:A3:2F:6C:3F</td>
+                  <td>Véranda</td>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox"/>
+                      <span class="sliderAppareil"></span>
+                    </label>
+                  </td>
+                  <td>20/05/25</td>
+                  <td class="dots">⋮</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>  
+          </section>
 
       <!-- Section Chambre -->
       <section id="section_Chambre" class="content-section" style="display: none;">
@@ -182,7 +275,7 @@
         </div>
         <!-- <p>Contenu des chambres</p> -->
 
-        <div class="container-chambre">
+        <div class="containers">
           <div class="container-left">
             <nav>
               <ul class="nav-buttonsDevis">
@@ -239,7 +332,9 @@
             </nav>
           </div>
 
-
+          <!-- Nouveau contenu pour la partie droite 
+        --> 
+     <div class="container-right"></div>
       </section>
 
       <!-- Ajout Appareil -->
@@ -425,7 +520,7 @@
                 <h3 class="texte-centre" >
                  ...
                 </h3>
-                <p>Adresse MAC du module : <span id="macAddress">En attente...</span></p>
+
              
               </div>
             
@@ -511,39 +606,35 @@
           </div>
           
           <div id="detail-m1-6" class="section-content">
-            <div class="container-pair">
+            <div class="container-pair" id="containerPair">
+              
+              <!-- Premier SmartSwitch -->
               <div class="box-rounded1">
                 <div class="top-section">
                   <img src="/Icones/icons8-lumière-100.png" class="icon-light" id="lightIcon" />
-                  
-                  <!-- ✅ Ajout de l'onclick ici -->
                   <label class="switch">
                     <input type="checkbox" onclick="publishMQTT(this)" />
                     <span class="slider"></span>
                   </label>
                 </div>
-              
                 <div class="bottom-section">
                   <div class="texts">
                     <p class="p1">Light</p>
-                    <h3 id="moduleTitle" class="p2">SmartSwitch-xxxx</h3>
+                    <h3 id="moduleTitle" class="p2 module-title" >SmartSwitch-001</h3>
                   </div>
                   <button class="more-btn">...</button>
                 </div>
               </div>
-              
-          
-              <div class="box-rounded2" onclick="showDetailM1()">
+        
+              <!-- Bouton Ajout -->
+              <div class="box-rounded2" onclick="addSmartSwitch()">
                 <img src="/Icones/ajoutLow.png">
                 <h2>Ajout équipement</h2>
               </div>
-              
+        
             </div>
           </div>
-          
-
-
-
+        
             <div id="detail-m2" class="section-content">
               <h2>Smart switch V1 M2</h2>
               <p>Identifiant : m2</p>
@@ -598,6 +689,50 @@
 
     </footer>
   </div>
+            <!-- Overlay flou -->
+            <div id="overlay"></div>
+        
+            <!-- Menu contextuel -->
+            <div id="contextMenu">
+              <button id="btnPropos">A propos du module</button>
+              <button id="btnParam">Configuration</button>
+              <button id="btnParam">Paramètre</button>
+              <button id="btnDelete">Supprimer</button>
+            </div>
+          
+            <!-- Modale Configuration -->
+            <div id="modalConfig">
+              <h2>Détails du module</h2>
+            
+              <div class="ligne-info">
+                <strong>Tension d'alimentation :</strong>
+                <span class="valeur">230V AC</span>
+              </div>
+            
+              <div class="ligne-info">
+                <strong>Courant maximal :</strong>
+                <span class="valeur">10A</span>
+              </div>
+            
+              <div class="ligne-info">
+                <strong>Version firmware :</strong>
+                <span class="valeur">v1.2.3</span>
+              </div>
+            
+              <div class="ligne-info">
+                <strong>Adresse MAC du module :</strong>
+                <span id="macAddress" class="valeur">En attente...</span>
+              </div>
+            
+              <div class="ligne-info">
+                <strong>IP locale :</strong>
+                <span class="valeur">192.168.4.1</span>
+              </div>
+            
+              <button id="btnClose">Fermer</button>
+            </div>
+            
+            
 </body>
 
 </html>
