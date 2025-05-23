@@ -119,6 +119,7 @@
              <img src="Images/téléchargement.jfif" alt="txt" width="" height="">
              ajout de img id="randomImage" src=""... 
               -->
+              <div class="loader" id="loader"></div>
             <img id="randomImage" src="" alt="txt" width="" width="300">
 
 
@@ -199,7 +200,7 @@
                   <td>C8:C7:A3:3F:6C:3F</td>
                   <td>Séjour</td>
                   <td>
-                    <label class="switch">
+                    <label class="switchE">
                       <input type="checkbox" />
                       <span class="sliderAppareil"></span>
                     </label>
@@ -213,7 +214,7 @@
                   <td>C8:C10:A4:2F:6C:3A</td>
                   <td>Cuisine</td>
                   <td>
-                    <label class="switch">
+                    <label class="switchE">
                       <input type="checkbox" />
                       <span class="slider"></span>
                     </label>
@@ -227,7 +228,7 @@
                   <td>F8:C9:A3:2F:6C:3A</td>
                   <td>Chambre bébé</td>
                   <td>
-                    <label class="switch">
+                    <label class="switchE">
                       <input type="checkbox"/>
                       <span class="sliderAppareil"></span>
                     </label>
@@ -241,7 +242,7 @@
                   <td>J8:C9:A3:2F:6C:3F</td>
                   <td>Véranda</td>
                   <td>
-                    <label class="switch">
+                    <label class="switchE">
                       <input type="checkbox"/>
                       <span class="slider"></span>
                     </label>
@@ -255,7 +256,7 @@
                   <td>K8:C9:A3:2F:6C:3F</td>
                   <td>Véranda</td>
                   <td>
-                    <label class="switch">
+                    <label class="switchE">
                       <input type="checkbox"/>
                       <span class="sliderAppareil"></span>
                     </label>
@@ -613,7 +614,7 @@
                 <div class="top-section">
                   <img src="/Icones/icons8-lumière-100.png" class="icon-light" id="lightIcon" />
                   <label class="switch">
-                    <input type="checkbox" onclick="publishMQTT(this)" />
+                    <input type="checkbox" data-topic="module/lumiere1" onclick="publishMQTT(this)" />
                     <span class="slider"></span>
                   </label>
                 </div>

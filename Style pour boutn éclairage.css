@@ -94,7 +94,20 @@
       width: 0;
       height: 0;
     }
-
+    .switchE {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 27px;
+      margin-left: auto;
+    }
+    
+    
+        .switchE input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
     .slider {
       position: absolute;
       cursor: pointer;
