@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fortico - Schedule Mode</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e2f;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #2d2d44;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+
+    label {
+      flex: 1 0 120px;
+    }
+
+    select, input[type="time"], input[type="checkbox"] {
+      flex: 2 0 200px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #3a3a5a;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #555;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4a4a7d;
+    }
+
+    .delete-btn {
+      padding: 5px 10px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <h1>🕒 Schedule Mode</h1>
+
+  <div class="card">
+    <div class="form-group">
+      <label for="device">Appareil</label>
+      <select id="device">
+        <option value="smartSwitch1">SmartSwitch 1</option>
+        <option value="smartSwitch2">SmartSwitch 2</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="day">Jour</label>
+      <select id="day">
+        <option value="Lundi">Lundi</option>
+        <option value="Mardi">Mardi</option>
+        <option value="Mercredi">Mercredi</option>
+        <option value="Jeudi">Jeudi</option>
+        <option value="Vendredi">Vendredi</option>
+        <option value="Samedi">Samedi</option>
+        <option value="Dimanche">Dimanche</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="onTime">Heure ON</label>
+      <input type="time" id="onTime" required />
+    </div>
+
+    <div class="form-group">
+      <label for="offTime">Heure OFF</label>
+      <input type="time" id="offTime" required />
+    </div>
+
+    <div class="form-group">
+      <label for="repeat">Hebdomadaire ?</label>
+      <input type="checkbox" id="repeat" />
+    </div>
+
+    <button onclick="addSchedule()">Ajouter au planning</button>
+  </div>
+
+  <div class="card">
+    <h2>📅 Planning</h2>
+    <table id="scheduleTable">
+      <thead>
+        <tr>
+          <th>Appareil</th>
+          <th>Jour</th>
+          <th>Heure ON</th>
+          <th>Heure OFF</th>
+          <th>Hebdo</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    function addSchedule() {
+      const device = document.getElementById('device').value;
+      const day = document.getElementById('day').value;
+      const onTime = document.getElementById('onTime').value;
+      const offTime = document.getElementById('offTime').value;
+      const repeat = document.getElementById('repeat').checked;
+
+      if (!onTime || !offTime) {
+        alert("Veuillez remplir les deux heures.");
+        return;
+      }
+
+      const table = document.getElementById('scheduleTable').getElementsByTagName('tbody')[0];
+      const row = table.insertRow();
+
+      row.innerHTML = `
+        <td>${device}</td>
+        <td>${day}</td>
+        <td>${onTime}</td>
+        <td>${offTime}</td>
+        <td>${repeat ? "Oui" : "Non"}</td>
+        <td><button class="delete-btn" onclick="deleteRow(this)">Supprimer</button></td>
+      `;
+    }
+
+    function deleteRow(button) {
+      const row = button.closest('tr');
+      row.remove();
+    }
+  </script>
+</body>
+</html>
