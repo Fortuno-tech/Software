@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./Style pour boutn éclairage.css">
-  <script src="./index.js" defer></script>
+  <script src="./index.Js" defer></script>
   <script src="./firmware.js" defer></script>
   <script src="./Bouton éclairage.js" defer></script>
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
@@ -55,49 +55,49 @@
               <ul class="nav-buttons">
                 <li>
                   <a href="#" class="nav-link active" data-target="content-section">
-                    <img src="Icones/homeHigh.png" alt="Home" class="icon-left" data-default="Icones/homeLow.png"
+                    <img src="./Icones/homeHigh.png" alt="Home" class="icon-left" data-default="Icones/homeLow.png"
                       data-active="Icones/homeHigh.png">
                     Acceuil
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_Appareil">
-                    <img src="Icones/equipementLow.png" alt="Appareil" class="icon-left"
+                    <img src="./Icones/equipementLow.png" alt="Appareil" class="icon-left"
                       data-default="Icones/equipementLow.png" data-active="Icones/equipementHigh.png">
                     Appareils
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_Chambre">
-                    <img src="Icones/chambreLow.png" alt="Chambre" class="icon-left"
+                    <img src="./Icones/chambreLow.png" alt="Chambre" class="icon-left"
                       data-default="Icones/chambreLow.png" data-active="Icones/chambreHigh.png">
                     Chambre
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_Ajout">
-                    <img src="Icones/ajoutLow.png" alt="Ajout" class="icon-left" data-default="Icones/ajoutLow.png"
+                    <img src="./Icones/ajoutLow.png" alt="Ajout" class="icon-left" data-default="Icones/ajoutLow.png"
                       data-active="Icones/ajoutHigh.png">
                     Ajout Appareil
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_scene">
-                    <img src="Icones/botLow.png" alt="Scène" class="icon-left" data-default="Icones/botLow.png"
+                    <img src="./Icones/botLow.png" alt="Scène" class="icon-left" data-default="Icones/botLow.png"
                       data-active="Icones/botHigh.png">
                     Scène
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_acces">
-                    <img src="Icones/accesLow.png" alt="Accès" class="icon-left" data-default="Icones/accesLow.png"
+                    <img src="./Icones/accesLow.png" alt="Accès" class="icon-left" data-default="Icones/accesLow.png"
                       data-active="Icones/accesHigh.png">
                     Accès
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link" data-target="section_parametre">
-                    <img src="Icones/parametreLow.png" alt="Paramètre" class="icon-left"
+                    <img src="./Icones/parametreLow.png" alt="Paramètre" class="icon-left"
                       data-default="Icones/parametreLow.png" data-active="Icones/parametreHigh.png">
                     Paramètre
                   </a>
@@ -126,7 +126,7 @@
           </div>
           <div class="fonctionalite">
             <div class="F1">
-              <img src="/Icones/ajoutLow.png">
+              <img src="./Icones/ajoutLow.png">
               <h2>Ajout équipement</h2>
             </div>
 
@@ -140,7 +140,7 @@
                         -->
             <div class="left-block">
               <div class="location">
-                <img src="/Icones/icons8-place-marker-100.png" alt="Localisation">
+                <img src="./Icones/icons8-place-marker-100.png" alt="Localisation">
                 <div id="city">Tamatave, 501</div>
               </div>
               <div class="time-date" id="time-date">Chargement...</div>
@@ -149,15 +149,15 @@
             <!-- Bloc droit : 3 icônes météo -->
             <div class="right-block">
               <div class="info-block">
-                <img src="/Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
+                <img src="./Icones/icons8-pluie-100.png" alt="Météo" id="weather-img">
                 <div id="weather-value">--%</div>
               </div>
               <div class="info-block">
-                <img src="/Icones/icons8-humide-100 (1).png" alt="Humidité">
+                <img src="./Icones/icons8-humide-100 (1).png" alt="Humidité">
                 <div id="humidity">--%</div>
               </div>
               <div class="info-block">
-                <img src="/Icones/temperature.png" alt="Température">
+                <img src="./Icones/temperature.png" alt="Température">
                 <div id="temp">--°C</div>
               </div>
             </div>
@@ -166,7 +166,7 @@
                      Fin de la classe Meteo -->
 
           <div class="bedroom">
-            <img src="/Icones/ajoutLow.png">
+            <img src="./Icones/ajoutLow.png">
             <h2>Ajout Caméra</h2>
           </div>
 
@@ -663,11 +663,68 @@
 
       <!-- Section Appareil -->
       <section id="section_scene" class="content-section" style="display: none;">
-        <div class="conteneur-hautScene">
-          <p>Scène</p>
-        </div>
+        
         <div class="conteneur-basScene">
-          <p>Cette page n’est pas encore disponible</p>
+    
+          <h1 class="titleHorloge">🕒 Schedule Mode</h1>
+
+          <div class="card" id="inputdate">
+            <div class="form-group">
+              <label for="device">Appareil</label>
+              <select id="device" style="width:315px;">
+                <option value="smartSwitch1">SmartSwitch 1</option>
+                <option value="smartSwitch2">SmartSwitch 2</option>
+              </select>
+            </div>
+        
+            <div class="form-group">
+              <label for="day">Jour</label>
+              <select id="day"  style="width:315px;">
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+                <option value="Samedi">Samedi</option>
+                <option value="Dimanche">Dimanche</option>
+              </select>
+            </div>
+        
+            <div class="form-group">
+              <label for="onTime">Heure ON</label>
+              <input type="time" id="onTime" required />
+            </div>
+        
+            <div class="form-group">
+              <label for="offTime">Heure OFF</label>
+              <input type="time" id="offTime" required />
+            </div>
+        
+            <div class="form-group">
+              <label for="repeat">Hebdomadaire ?</label>
+              <input type="checkbox" id="repeat" />
+            </div>
+        
+            <button onclick="addSchedule()">Ajouter au planning</button>
+          </div>
+        
+          <div class="card">
+            <h2 class="titlePlanning">📅 Planning</h2>
+            <table id="scheduleTable">
+              <thead>
+                <tr>
+                  <th>Appareil</th>
+                  <th>Jour</th>
+                  <th>Heure ON</th>
+                  <th>Heure OFF</th>
+                  <th>Hebdo</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
         </div>
       </section>
 

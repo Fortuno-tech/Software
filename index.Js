@@ -203,9 +203,9 @@ function togglePassword(eyeIcon) {
 
 
   const image = [
-    "/Images/fortico.png",
-    "/Images/home.jpg",
-    "/Images/pub.jpg",
+    "./Images/fortico.png",
+    "./Images/home.jpg",
+    "./Images/pub.jpg",
   ];
 
   function avoir_image_alea(current_image) {
@@ -312,4 +312,32 @@ function togglePassword(eyeIcon) {
 
 
 
-  
+  function addSchedule() {
+    const device = document.getElementById('device').value;
+    const day = document.getElementById('day').value;
+    const onTime = document.getElementById('onTime').value;
+    const offTime = document.getElementById('offTime').value;
+    const repeat = document.getElementById('repeat').checked;
+
+    if (!onTime || !offTime) {
+      alert("Veuillez remplir les deux heures.");
+      return;
+    }
+
+    const table = document.getElementById('scheduleTable').getElementsByTagName('tbody')[0];
+    const row = table.insertRow();
+
+    row.innerHTML = `
+      <td>${device}</td>
+      <td>${day}</td>
+      <td>${onTime}</td>
+      <td>${offTime}</td>
+      <td>${repeat ? "Oui" : "Non"}</td>
+      <td><button class="delete-btn" onclick="deleteRow(this)">Supprimer</button></td>
+    `;
+  }
+
+  function deleteRow(button) {
+    const row = button.closest('tr');
+    row.remove();
+  }

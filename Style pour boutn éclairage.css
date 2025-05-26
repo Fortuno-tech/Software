@@ -39,12 +39,13 @@
     }
 
 
-    table {
+    .section_Appareil table {
       width: 100%;
       border-collapse: collapse;
       border-radius: 8px;
       overflow: hidden;
-      background-color: #2f3c4f;
+      /* background-color: #2f3c4f; */
+      background-color: red;
     }
     th, td {
       padding: 15px;

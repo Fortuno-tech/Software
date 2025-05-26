@@ -62,13 +62,15 @@ h1 {
 }
 
 .import-pdp img {
-  position: absolute;
+  position: relative;
   height: 28px;
-  left: 153px;
-  top: 195px;
+  left: 141px;
+  top: -40px;
   cursor: pointer;
 }
-
+.titlePlanning{
+  color: white;
+}
 .pdp {
   position: relative;
   left: 34px;
@@ -1466,13 +1468,12 @@ footer {
   left: 0;
   width: 95%;
   height: 100%;
-  background-color: #4A4A58;
+  /* background-color: #4A4A58; */
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex
+;
   box-sizing: border-box;
-}
+  flex-direction: column;
 
 .conteneur-basScene p {
   color: #8996a9;
@@ -1528,4 +1529,116 @@ footer {
 .conteneur-basAcces p {
   color: #8996a9;
   font-size: 20px;
+}
+
+
+.conteneur-basAcces h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  
+        /* border-radius: 10px; */
+        padding: 20px;
+        margin-bottom: 20px;
+        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); */
+        display: flex
+;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+}
+.card label{
+  color: white;
+}
+
+
+.form-group {
+  display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          margin-bottom: 15px;
+          font-size: x-large;
+          align-items: center;
+}
+
+label {
+  flex: 1 0 120px;
+}
+
+select, input[type="time"] {
+width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+        left: 200px;
+}
+select, input[type="time"], input[type="checkbox"]{
+/* display: flex; */
+}
+input[type="checkbox"]{
+  position: relative;
+        left: 162px;
+}
+.card h1{
+  font-size: xx-large;
+  color: white;
+  font-family: sans-serif;
+}
+#inputdate{
+  position: relative;
+  left: 79px;
+  top: 2px;
+}
+.titleHorloge{
+  color: #E6EAEE;
+        font-size: 2.3em;
+        margin: 5px;
+}
+button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: aqua;
+  border: 1px inset aqua;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  /* background-color: #45a049; */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #555;
+  text-align: center;
+}
+
+th {
+  background-color:transparent;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  /* background-color: #e53935; */
+  color: red;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+#scheduleTable{
+  background-color: none !important;
+}
 }
