@@ -90,6 +90,24 @@ navLinks.forEach(link => {
   });
 });
 
+const scene = document.querySelectorAll('.section-plan-mouv-light a');
+
+scene.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Masquer toutes les sections
+    sections.forEach(section => section.style.display = 'none');
+
+    // Afficher la section cible
+    const targetId = link.getAttribute('data-target');
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.style.display = 'flex'; // ou 'block' selon ton layout
+    }
+  });
+});
+
 
 // -- Script Horloge Date
 function updateDateTime() {

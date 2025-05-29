@@ -748,7 +748,22 @@ footer {
   font-weight: lighter;
   /* display: block; */
 }
-
+.section-plan-mouv-light{
+  display: flex;
+  height: 180px;
+}
+.info-plan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section-planification ,#section-mouvement, #section-lightAll{
+margin: 20px;
+background-color: #203458;
+border-radius: 10px;
+padding: 10px;
+cursor: pointer;
+}
 .nav-buttonsDevis {
   list-style: none;
   padding: 0;
@@ -1463,14 +1478,14 @@ footer {
 }
 
 .conteneur-basScene {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 95%;
-  height: 100%;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 95%; */
+  /* height: 100%; */
   /* background-color: #4A4A58; */
   z-index: 1;
-  display: flex
+  /* display: flex */
 ;
   box-sizing: border-box;
   flex-direction: column;
